@@ -1,0 +1,9 @@
+venv/
+.env
+__pycache__/
+*.db
+*.png
+*.jpg
+*.webp
+.DS_Store
+node_modules/

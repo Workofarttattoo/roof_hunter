@@ -1,0 +1,6 @@
+names:
+  0: stable_roof
+  1: immediate_repair_needed
+path: /Users/noone/.gemini/antigravity/scratch/roof_hunter/training_data
+train: train/images
+val: val/images
