@@ -32,10 +32,14 @@ from geopy.exc import GeocoderTimedOut
 BASE    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(BASE, 'leads_manifests', 'authoritative_storms.db')
 
-# SPC (Storm Prediction Center) Local Storm Reports — live daily hail CSV
-SPC_TODAY     = "https://www.spc.noaa.gov/climo/reports/today_filtered_hail.csv"
-SPC_YESTERDAY = "https://www.spc.noaa.gov/climo/reports/yesterday_filtered_hail.csv"
-SPC_ARCHIVE   = "https://www.spc.noaa.gov/climo/reports/{date}_rpts_filtered_hail.csv"  # date=YYMMDD
+# SPC (Storm Prediction Center) Local Storm Reports — live daily CSV
+SPC_TODAY_HAIL     = "https://www.spc.noaa.gov/climo/reports/today_filtered_hail.csv"
+SPC_YESTERDAY_HAIL = "https://www.spc.noaa.gov/climo/reports/yesterday_filtered_hail.csv"
+SPC_ARCHIVE_HAIL   = "https://www.spc.noaa.gov/climo/reports/{date}_rpts_filtered_hail.csv"
+
+SPC_TODAY_WIND     = "https://www.spc.noaa.gov/climo/reports/today_filtered_wind.csv"
+SPC_YESTERDAY_WIND = "https://www.spc.noaa.gov/climo/reports/yesterday_filtered_wind.csv"
+SPC_ARCHIVE_WIND   = "https://www.spc.noaa.gov/climo/reports/{date}_rpts_filtered_wind.csv"
 
 geolocator = Nominatim(user_agent="roof_hunter_live_ingest_v2", timeout=12)
 
@@ -454,16 +458,21 @@ def fetch_spc_live(days=7, min_size_inches=1.0):
     all_rows = []
 
     # Today + yesterday via named endpoints
-    all_rows += fetch_spc_csv(SPC_TODAY, "today")
-    all_rows += fetch_spc_csv(SPC_YESTERDAY, "yesterday")
+    all_rows += fetch_spc_csv(SPC_TODAY_HAIL, "today_hail")
+    all_rows += fetch_spc_csv(SPC_YESTERDAY_HAIL, "yesterday_hail")
+    
+    # Wind Reports (100 mph focus)
+    all_rows += fetch_spc_csv(SPC_TODAY_WIND, "today_wind")
+    all_rows += fetch_spc_csv(SPC_YESTERDAY_WIND, "yesterday_wind")
 
     # Remaining days via date-stamped archive
     for day_offset in range(2, days):
         d = datetime.now(timezone.utc) - timedelta(days=day_offset)
-        date_str = d.strftime("%y%m%d")  # YYMMDD
-        label    = d.strftime("%Y-%m-%d")
-        url = SPC_ARCHIVE.format(date=date_str)
-        all_rows += fetch_spc_csv(url, label)
+        date_str = d.strftime("%y%m%d")
+        url_hail = SPC_ARCHIVE_HAIL.format(date=date_str)
+        url_wind = SPC_ARCHIVE_WIND.format(date=date_str)
+        all_rows += fetch_spc_csv(url_hail, f"{d.strftime('%Y-%m-%d')}_hail")
+        all_rows += fetch_spc_csv(url_wind, f"{d.strftime('%Y-%m-%d')}_wind")
 
     print(f"  [SPC] Total raw reports across {days} days: {len(all_rows)}")
 
@@ -471,30 +480,45 @@ def fetch_spc_live(days=7, min_size_inches=1.0):
     normalized = []
     for row in all_rows:
         try:
-            # SPC size is in hundredths of inches (175 = 1.75")
-            size_raw = float(row.get("Size", 0))
-            size_in  = size_raw / 100.0
-            if size_in < min_size_inches:
-                continue
+            # Detect type and size
+            is_wind = "Speed" in row
+            size_raw = float(row.get("Size", row.get("Speed", 0)))
+            
+            if is_wind:
+                # Wind speed is in knots. 100 mph = 87 knots.
+                # Threshold for high-wind forensics
+                if size_raw < 60: # We'll keep anything over 60kts (~70mph) but flag 100mph
+                    continue
+                size_in = size_raw # magnitude for wind
+                event_type = "Wind"
+            else:
+                # Hail size is in hundredths of inches
+                size_in = size_raw / 100.0
+                if size_in < min_size_inches:
+                    continue
+                event_type = "Hail"
+
             lat = float(row.get("Lat", 0))
             lon = float(row.get("Lon", 0))
             if not lat or not lon:
                 continue
+                
             normalized.append({
                 "latitude":  lat,
                 "longitude": lon,
                 "magnitude": size_in,
+                "event_type": event_type,
                 "location":  row.get("Location", ""),
                 "county":    row.get("County", ""),
                 "state_abbr":row.get("State", ""),
                 "time":      row.get("Time", ""),
                 "comments":  row.get("Comments", ""),
-                "source":    "NOAA_SPC",
+                "source":    f"NOAA_SPC_{event_type.upper()}",
             })
         except (ValueError, TypeError):
             continue
 
-    print(f"  [SPC] {len(normalized)} reports >= {min_size_inches}\"")
+    print(f"  [SPC] {len(normalized)} significant events found.")
     return normalized
 
 # State abbr → full name

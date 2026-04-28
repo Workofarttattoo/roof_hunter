@@ -17,6 +17,7 @@ import requests
 import logging
 from dotenv import load_dotenv, dotenv_values
 from cloud_notifier import send_lead_dispatch
+from insurance_enricher import enrich_leads_with_insurance
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -45,14 +46,15 @@ class AWSDiscoveryWorker:
         conn.row_factory = sqlite3.Row
         c = conn.cursor()
         
-        # We look for storms with the required magnitude in the last 30 days
-        # Use DISTINCT on street_address to ensure we only scan once per house
+        # PRIORITY: Oklahoma catastrophic wind swath (Vance AFB area)
+        # Sort by Magnitude DESC and prioritize Oklahoma states
         query = """
         SELECT DISTINCT c.street_address, s.id, s.latitude, s.longitude, s.city, s.state, s.magnitude
         FROM storms s
         JOIN contacts c ON s.id = c.event_id
         WHERE s.magnitude >= ? 
         AND s.event_date >= date('now', ?)
+        ORDER BY (CASE WHEN s.state = 'OKLAHOMA' THEN 0 ELSE 1 END), s.magnitude DESC
         """
         params = (min_hail, f'-{days} days')
         c.execute(query, params)
@@ -136,6 +138,10 @@ class AWSDiscoveryWorker:
         conn.close()
         logger.info(f"AWS Discovery Pipeline Complete. Processed {results_found} properties.")
         
+        # Trigger Insurance Enrichment
+        logger.info("Enriching leads with Insurance Carrier data...")
+        enrich_leads_with_insurance()
+
         # Trigger Auto-Dispatch to Inventor
         logger.info("Triggering Lead Dispatch to inventor@aios.is...")
         send_lead_dispatch()

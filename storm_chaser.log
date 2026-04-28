@@ -1,0 +1,1438 @@
+2026-04-26 23:17:29,313 - INFO - 🌪️ STORM CHASER DAEMON ACTIVATED
+2026-04-26 23:17:29,313 - INFO - Monitoring for Hail >= 1.75" and Tornado activity...
+2026-04-26 23:17:29,313 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 63 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 214
+  [SPC] 81 significant events found.
+  [1/81] 1.75" | 7 NNE Mcpherson, KS | (38.470,-97.630)
+  [2/81] 1.75" | Hillsboro, KS | (38.350,-97.200)
+  [3/81] 2.0" | Madison, KS | (38.130,-96.140)
+  [4/81] 1.75" | Erie, KS | (37.570,-95.240)
+  [5/81] 3.0" | 2 NNW Iowa Park, TX | (33.980,-98.690)
+  [6/81] 1.75" | 1 W Sheppard Afb, TX | (33.980,-98.530)
+  [7/81] 2.5" | Walker, MO | (37.900,-94.230)
+  [8/81] 2.75" | 6 ENE Lawton, OK | (34.620,-98.300)
+  [9/81] 2.75" | 1 SSW El Dorado Springs, MO | (37.870,-94.030)
+  [10/81] 2.75" | 3 ENE Caplinger Mills, MO | (37.820,-93.750)
+  [11/81] 2.75" | Humansville, MO | (37.790,-93.580)
+  [12/81] 2.25" | 5 N Dean, TX | (34.020,-98.360)
+  [13/81] 2.5" | Sycamore, KS | (37.330,-95.720)
+  [14/81] 2.0" | Greenfield, MO | (37.420,-93.840)
+  [15/81] 3.0" | 1 NW Cherryvale, KS | (37.280,-95.570)
+  [16/81] 2.0" | 4 SW Pittsburg, MO | (37.810,-93.360)
+  [17/81] 1.75" | 1 S Arcola, MO | (37.530,-93.870)
+  [18/81] 1.75" | Walnut Grove, MO | (37.410,-93.550)
+  [19/81] 1.75" | Morrisville, MO | (37.480,-93.430)
+  [20/81] 2.5" | Creighton, MO | (38.500,-94.070)
+  [21/81] 1.75" | 5 N Mcpherson, KS | (38.440,-97.660)
+  [22/81] 2.0" | 2 SE Salina, KS | (38.790,-97.590)
+  [23/81] 2.0" | 2 SSW Salina, KS | (38.780,-97.640)
+  [24/81] 4.5" | Alpine, AR | (34.230,-93.380)
+  [25/81] 2.5" | Wister, OK | (34.970,-94.730)
+  [26/81] 3.0" | 6 SSW Lakeside City, TX | (33.750,-98.600)
+  [27/81] 1.75" | 5 N Vanoss, OK | (34.840,-96.860)
+  [28/81] 1.75" | 1 NE Lakeside City, TX | (33.840,-98.530)
+  [29/81] 2.0" | 4 E Heavener, OK | (34.890,-94.540)
+  [30/81] 2.0" | 1 S Lakeside City, TX | (33.810,-98.550)
+  [31/81] 1.75" | 6 NW Lake Arrowhead, TX | (33.790,-98.420)
+  [32/81] 2.5" | 2 SSW Iuka, KS | (37.700,-98.740)
+  [33/81] 1.75" | 5 NE Vinita, OK | (36.690,-95.090)
+  [34/81] 1.75" | 3 SSW Maize, KS | (37.730,-97.480)
+  [35/81] 1.75" | 3 WNW Downtown Wichita, KS | (37.710,-97.390)
+  [36/81] 1.75" | 1 WSW Huddleston, AR | (34.580,-93.860)
+  [37/81] 2.5" | 7 SE Poteau, OK | (34.990,-94.520)
+  [38/81] 2.0" | 11 NE Jacksboro, TX | (33.320,-98.000)
+  [39/81] 2.5" | 2 W Hartford, AR | (35.020,-94.410)
+  [40/81] 1.75" | 4 NE Norman, AR | (34.490,-93.630)
+  [41/81] 2.75" | Runaway Bay, TX | (33.170,-97.870)
+  [42/81] 2.0" | 2 N Caddo Gap, AR | (34.420,-93.620)
+  [43/81] 1.75" | 6 SSW Paradise, TX | (33.070,-97.710)
+  [44/81] 2.75" | Glenwood, AR | (34.330,-93.550)
+  [45/81] 2.75" | Welsh, AR | (34.360,-93.470)
+  [46/81] 3.0" | Amity, AR | (34.270,-93.460)
+  [47/81] 1.75" | 4 SW Paradise, TX | (33.110,-97.720)
+  [48/81] 2.5" | Point Cedar, AR | (34.330,-93.310)
+  [49/81] 1.75" | 4 S Elk Creek, NE | (40.240,-96.140)
+  [50/81] 3.0" | 1 WNW Azle, TX | (32.900,-97.540)
+  [51/81] 3.0" | 1 W Lakeside, TX | (32.820,-97.510)
+  [52/81] 2.5" | 3 NNE Aledo, TX | (32.740,-97.570)
+  [53/81] 2.5" | 2 S White Settlement, TX | (32.730,-97.460)
+  [54/81] 1.75" | Ozan, AR | (33.850,-93.720)
+  [55/81] 2.25" | 2 SW Westover Hills, TX | (32.720,-97.430)
+  [56/81] 2.75" | 5 S Burtsell, AR | (33.880,-93.300)
+  [57/81] 2.75" | Hope, AR | (33.670,-93.590)
+  [59/81] 2.75" | 3 NNW Fort Worth, TX | (32.790,-97.350)
+  [60/81] 3.0" | 4 WSW Cockrell Hill, TX | (32.710,-96.950)
+  [61/81] 2.0" | 3 N Kennedale, TX | (32.690,-97.210)
+  [62/81] 1.75" | 1 N Stamps, AR | (33.370,-93.490)
+  [63/81] 2.75" | 7 WSW Homer, LA | (32.760,-93.180)
+  [64/81] 3.5" | 4 SSW Bells, TX | (33.570,-96.450)
+  [65/81] 4.0" | 1 W Trenton, TX | (33.430,-96.350)
+  [66/81] 70.0" | Canton, KS | (38.390,-97.430)
+  [67/81] 70.0" | 4 ENE Reading, KS | (38.550,-95.900)
+  [68/81] 60.0" | Lyndon, KS | (38.610,-95.690)
+  [69/81] 60.0" | 9 N Yates Center, KS | (38.000,-95.750)
+  [70/81] 80.0" | 5 W Neosho Falls, KS | (38.010,-95.640)
+  [71/81] 60.0" | 6 WNW Colony, KS | (38.100,-95.460)
+  [72/81] 62.0" | 4 NW Paola, KS | (38.620,-94.910)
+  [73/81] 60.0" | 2 E Freeman, MO | (38.620,-94.470)
+  [74/81] 68.0" | York Airport, NE | (40.890,-97.620)
+  [75/81] 65.0" | 1 N Macksville, KS | (37.970,-98.970)
+  [76/81] 60.0" | 6 S Jamestown, KS | (39.520,-97.870)
+  [77/81] 75.0" | 1 NW Iuka, KS | (37.730,-98.740)
+  [78/81] 60.0" | 6 S Clay Center, KS | (39.290,-97.130)
+  [79/81] 89.0" | 1 NW Springtown, TX | (32.980,-97.700)
+  [80/81] 70.0" | 1 NW Westworth, TX | (32.770,-97.440)
+  [81/81] 60.0" | 4 NE Duncanville, TX | (32.680,-96.860)
+
+[SPC DONE] Inserted: 80 | Skipped (dupe): 1
+
+[2/2] Injecting Oklahoma field reports:
+  • 6 SSW Marion (4.0")
+  • Peabody (2.25")
+  • Elbing (2.0")
+  • 7 SSW Mayfield (3.5")
+  • 4 W Braman (3.75")
+  • 6 W Braman (3.0")
+  • 5 NW Deer Creek (2.75")
+  • 3 S Renfrow (2.5")
+  • 1 E Douglas (2.75")
+  • 822 County Road W (3.5")
+  • Thompsonchester (3.9")
+  • 4 NW Joplin (2.5")
+  • Bentonville Front (2.25")
+  • Enid North (3.0")
+  • Ponca City West (2.75")
+  • Stillwater North (2.0")
+  [+] Injected: 6 SSW Marion → storm_id=5252 | 4.0" hail | 38.2800,-97.0800
+  [+] Injected: Peabody → storm_id=5253 | 2.25" hail | 38.1700,-97.1100
+  [+] Injected: Elbing → storm_id=5254 | 2.0" hail | 38.0500,-97.1300
+  [+] Injected: 7 SSW Mayfield → storm_id=5255 | 3.5" hail | 37.1700,-97.5900
+  [+] Injected: 4 W Braman → storm_id=5256 | 3.75" hail | 36.9300,-97.4100
+  [+] Injected: 6 W Braman → storm_id=5257 | 3.0" hail | 36.9200,-97.4400
+  [+] Injected: 5 NW Deer Creek → storm_id=5258 | 2.75" hail | 36.8600,-97.5800
+  [+] Injected: 3 S Renfrow → storm_id=5259 | 2.5" hail | 36.8818,-97.6561
+  [+] Injected: 1 E Douglas → storm_id=5260 | 2.75" hail | 36.2600,-97.6500
+  [+] Injected: 822 County Road W → storm_id=5261 | 3.5" hail | 40.4500,-96.8800
+  [+] Injected: Thompsonchester → storm_id=5262 | 3.9" hail | 31.5200,-97.1300
+  [+] Injected: 4 NW Joplin → storm_id=5263 | 2.5" hail | 37.1200,-94.5500
+  [+] Injected: Bentonville Front → storm_id=5264 | 2.25" hail | 36.3700,-94.2100
+  [+] Injected: Enid North → storm_id=5265 | 3.0" hail | 36.4100,-97.8700
+  [+] Injected: Ponca City West → storm_id=5266 | 2.75" hail | 36.7000,-97.0800
+  [+] Injected: Stillwater North → storm_id=5267 | 2.0" hail | 36.1100,-97.0500
+
+[MANUAL DONE] Injected 16 Oklahoma field sites
+
+=======================================================
+  AUTHORITATIVE STORMS DB — CURRENT STATE
+=======================================================
+  Total Storm Events : 5,267
+  NOAA SWDI (live)   : 4,076
+  Field Reports      : 19
+  States Covered     : 57
+  Latest Event       : 24-JAN-26 20:25:00
+=======================================================
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-26 23:17:31,135 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-26 23:17:31,136 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-26 23:17:31,139 - INFO - 🏗️ Generating forensic addresses for 96 new storm hits...
+2026-04-26 23:17:31,944 - INFO - 💎 New Forensic Lead: 106, Allison Road, Parker County, Texas, 76082, United States (Storm ID: 5249)
+2026-04-26 23:17:33,480 - INFO - 💎 New Forensic Lead: 200th Road, Neosho Falls, Woodson County, Kansas, United States (Storm ID: 5240)
+2026-04-26 23:17:34,710 - INFO - 💎 New Forensic Lead: US 281, Iuka, Pratt County, Kansas, 67066, United States (Storm ID: 5247)
+2026-04-26 23:17:36,272 - INFO - 💎 New Forensic Lead: Olive Street, Canton, McPherson County, Kansas, 67428, United States (Storm ID: 5236)
+2026-04-26 23:17:37,822 - INFO - 💎 New Forensic Lead: West 285th Street, Osage County, Kansas, United States (Storm ID: 5237)
+2026-04-26 23:17:38,988 - INFO - 💎 New Forensic Lead: North Warehouse Street, Fort Worth, Tarrant County, Texas, 76127, United States (Storm ID: 5250)
+2026-04-26 23:17:40,151 - INFO - 💎 New Forensic Lead: Highway 34, York, York County, Nebraska, 68467, United States (Storm ID: 5244)
+2026-04-26 23:17:41,685 - INFO - 💎 New Forensic Lead: Northwest 10th Street, Dillwyn, Stafford County, Kansas, 67557, United States (Storm ID: 5245)
+2026-04-26 23:17:43,245 - INFO - 💎 New Forensic Lead: State Highway 68, Miami County, Kansas, 66071, United States (Storm ID: 5242)
+2026-04-26 23:17:44,453 - INFO - 💎 New Forensic Lead: 701, Madison Street, Lyndon, Osage County, Kansas, 66451, United States (Storm ID: 5238)
+2026-04-26 23:17:46,065 - INFO - 💎 New Forensic Lead: 190th Road, Woodson County, Kansas, United States (Storm ID: 5239)
+2026-04-26 23:17:47,305 - INFO - 💎 New Forensic Lead: Southwest Colorado Road, Anderson County, Kansas, United States (Storm ID: 5241)
+2026-04-26 23:17:48,487 - INFO - 💎 New Forensic Lead: 11210, MO 2, Prettyman, Cass County, Missouri, 64746, United States (Storm ID: 5243)
+2026-04-26 23:17:49,656 - INFO - 💎 New Forensic Lead: 30th Road, Cloud County, Kansas, 66948, United States (Storm ID: 5246)
+2026-04-26 23:17:51,192 - INFO - 💎 New Forensic Lead: Navajo Road (1400), Clay County, Kansas, 67432, United States (Storm ID: 5248)
+2026-04-26 23:17:52,760 - INFO - 💎 New Forensic Lead: 5464, Saturn Drive, Dallas, Dallas County, Texas, 75237, United States (Storm ID: 5251)
+2026-04-26 23:17:54,294 - INFO - 💎 New Forensic Lead: 11838, AR 8, Alpine, Clark County, Arkansas, 71921, United States (Storm ID: 5195)
+2026-04-26 23:17:55,538 - INFO - 💎 New Forensic Lead: 882, West Saunders Street, Trenton, Fannin County, Texas, 75490, United States (Storm ID: 5235)
+2026-04-26 23:17:57,074 - INFO - 💎 New Forensic Lead: Pawnee Road, Aulne, Marion County, Kansas, United States (Storm ID: 5252)
+2026-04-26 23:17:58,639 - INFO - 💎 New Forensic Lead: Primitive Baptist Church, Benton Drive, Waco, McLennan County, Texas, 76706, United States (Storm ID: 5262)
+2026-04-26 23:17:59,871 - INFO - 💎 New Forensic Lead: 9156, North 108th Street, Kay County, Oklahoma, 74632, United States (Storm ID: 5256)
+2026-04-26 23:18:01,041 - INFO - 💎 New Forensic Lead: Marlow Road, Grayson County, Texas, 75414, United States (Storm ID: 5234)
+2026-04-26 23:18:02,204 - INFO - 💎 New Forensic Lead: West 80th Street South, Sumner County, Kansas, 67152, United States (Storm ID: 5255)
+2026-04-26 23:18:03,464 - INFO - 💎 New Forensic Lead: 11803, West Birch Road, Gage County, Nebraska, 68465, United States (Storm ID: 5261)
+2026-04-26 23:18:05,032 - INFO - 💎 New Forensic Lead: 2017, Johnson Road, Iowa Park, Wichita County, Texas, 76367, United States (Storm ID: 5176)
+2026-04-26 23:18:06,563 - INFO - 💎 New Forensic Lead: US 169, Montgomery County, Kansas, 67335, United States (Storm ID: 5186)
+2026-04-26 23:18:08,082 - INFO - 💎 New Forensic Lead: State Highway 79 South, Lakeside City, Archer County, Texas, United States (Storm ID: 5197)
+2026-04-26 23:18:09,310 - INFO - 💎 New Forensic Lead: 531, North Center Street, Amity, Clark County, Arkansas, 71921, United States (Storm ID: 5217)
+2026-04-26 23:18:10,438 - INFO - 💎 New Forensic Lead: 525, Inwood Road, Azle, Tarrant County, Texas, 76020, United States (Storm ID: 5221)
+2026-04-26 23:18:12,177 - INFO - 💎 New Forensic Lead: 6731, La Cantera Drive, Tarrant County, Texas, 76108, United States (Storm ID: 5222)
+2026-04-26 23:18:13,747 - INFO - 💎 New Forensic Lead: Independence Way, Dallas, Dallas County, Texas, 75236, United States (Storm ID: 5230)
+2026-04-26 23:18:15,271 - INFO - 💎 New Forensic Lead: North 140th Street, Nardin, Kay County, Oklahoma, United States (Storm ID: 5257)
+2026-04-26 23:18:16,826 - INFO - 💎 New Forensic Lead: East Birch Avenue, Enid, Garfield County, Oklahoma, 73701, United States (Storm ID: 5265)
+2026-04-26 23:18:17,995 - INFO - 💎 New Forensic Lead: Northeast 75th Street, Comanche County, Oklahoma, 73502, United States (Storm ID: 5179)
+2026-04-26 23:18:19,165 - INFO - 💎 New Forensic Lead: 805, South 1st Street, El Dorado Springs, Cedar County, Missouri, 64744, United States (Storm ID: 5180)
+2026-04-26 23:18:20,327 - INFO - 💎 New Forensic Lead: MO J, Graceland, Cedar County, Missouri, United States (Storm ID: 5181)
+2026-04-26 23:18:21,578 - INFO - 💎 New Forensic Lead: 344, West Mill Street, Humansville, Polk County, Missouri, 65674, United States (Storm ID: 5182)
+2026-04-26 23:18:23,106 - INFO - 💎 New Forensic Lead: Runaway Bay, Wise County, Texas, United States (Storm ID: 5212)
+2026-04-26 23:18:24,437 - INFO - 💎 New Forensic Lead: 377, Cory Street, Glenwood, Pike County, Arkansas, 71943, United States (Storm ID: 5215)
+2026-04-26 23:18:25,645 - INFO - 💎 New Forensic Lead: US 70, Welsh, Glenwood, Montgomery County, Arkansas, United States (Storm ID: 5216)
+2026-04-26 23:18:26,899 - INFO - 💎 New Forensic Lead: US 67, Clark County, Arkansas, United States (Storm ID: 5227)
+2026-04-26 23:18:28,048 - INFO - 💎 New Forensic Lead: East Avenue A, Frisco Addition, Hope, Hempstead County, Arkansas, 71801, United States (Storm ID: 5228)
+2026-04-26 23:18:29,688 - INFO - 💎 New Forensic Lead: Northwest 25th Street, Fort Worth Stockyards National Historic District, Fort Worth, Tarrant County, Texas, 76106, United States (Storm ID: 5229)
+2026-04-26 23:18:30,863 - INFO - 💎 New Forensic Lead: LA 534, Ruple, Claiborne Parish, Louisiana, United States (Storm ID: 5233)
+2026-04-26 23:18:32,012 - INFO - 💎 New Forensic Lead: Johnston Road, Clyde, Grant County, Oklahoma, United States (Storm ID: 5258)
+2026-04-26 23:18:33,178 - INFO - 💎 New Forensic Lead: E0520 Road, Douglas, Garfield County, Oklahoma, 73733, United States (Storm ID: 5260)
+2026-04-26 23:18:34,345 - INFO - 💎 New Forensic Lead: 439, South 4th Street, Ponca City, Kay County, Oklahoma, 74601, United States (Storm ID: 5266)
+2026-04-26 23:18:35,470 - INFO - 💎 New Forensic Lead: 301, North 5th Street, Walker, Vernon County, Missouri, 64790, United States (Storm ID: 5178)
+2026-04-26 23:18:36,638 - INFO - 💎 New Forensic Lead: North Street, Sycamore, Montgomery County, Kansas, 67363, United States (Storm ID: 5184)
+2026-04-26 23:18:38,178 - INFO - 💎 New Forensic Lead: MO 7, Creighton, Cass County, Missouri, 64739, United States (Storm ID: 5191)
+2026-04-26 23:18:39,743 - INFO - 💎 New Forensic Lead: Mills Street, Wister, LeFlore County, Oklahoma, 74966, United States (Storm ID: 5196)
+2026-04-26 23:18:40,929 - INFO - 💎 New Forensic Lead: Pratt Municipal Airport, Hamilton Road, Pratt, Pratt County, Kansas, United States (Storm ID: 5203)
+2026-04-26 23:18:42,097 - INFO - 💎 New Forensic Lead: Monroe, LeFlore County, Oklahoma, 74947, United States (Storm ID: 5208)
+2026-04-26 23:18:43,717 - INFO - 💎 New Forensic Lead: 9008, AR 96, Apex, Sebastian County, Arkansas, 72938, United States (Storm ID: 5210)
+2026-04-26 23:18:45,246 - INFO - 💎 New Forensic Lead: AR 84, Point Cedar, Hot Spring County, Arkansas, 71929:72104, United States (Storm ID: 5219)
+2026-04-26 23:18:46,812 - INFO - 💎 New Forensic Lead: Green Hook Road, Walsh Ranch, Fort Worth, Parker County, Texas, 76008, United States (Storm ID: 5223)
+2026-04-26 23:18:48,113 - INFO - 💎 New Forensic Lead: 3025, Sonora Trail, Western Hills North, Fort Worth, Tarrant County, Texas, 76116, United States (Storm ID: 5224)
+2026-04-26 23:18:49,369 - INFO - 💎 New Forensic Lead: Kiowa Road, Grant County, Oklahoma, United States (Storm ID: 5259)
+2026-04-26 23:18:50,762 - INFO - 💎 New Forensic Lead: North Peace Church Avenue, Jasper County, Missouri, 64834, United States (Storm ID: 5263)
+2026-04-26 23:18:52,111 - INFO - 💎 New Forensic Lead: FM 2393, Dean, Clay County, Texas, United States (Storm ID: 5183)
+2026-04-26 23:18:53,330 - INFO - 💎 New Forensic Lead: 6700, Kirkwood Road, Ridglea Hills, Fort Worth, Tarrant County, Texas, 76116, United States (Storm ID: 5226)
+2026-04-26 23:18:54,508 - INFO - 💎 New Forensic Lead: Peabody, Marion County, Kansas, 66866, United States (Storm ID: 5253)
+2026-04-26 23:18:55,681 - INFO - 💎 New Forensic Lead: Downtown Activity Center, 215, Southwest A Street, Bentonville, Benton County, Arkansas, 72712, United States (Storm ID: 5264)
+2026-04-26 23:18:57,224 - INFO - 💎 New Forensic Lead: Southwest Boulevard, Madison, Greenwood County, Kansas, 66860, United States (Storm ID: 5174)
+2026-04-26 23:18:58,412 - INFO - 💎 New Forensic Lead: 289, Jefferson Street, Greenfield, Dade County, Missouri, 65661, United States (Storm ID: 5185)
+2026-04-26 23:18:59,537 - INFO - 💎 New Forensic Lead: MO TT, Polk County, Missouri, 65724, United States (Storm ID: 5187)
+2026-04-26 23:19:00,656 - INFO - 💎 New Forensic Lead: 1200, Shoreline Drive, Salina, Saline County, Kansas, 67401, United States (Storm ID: 5193)
+2026-04-26 23:19:01,829 - INFO - 💎 New Forensic Lead: 3208, Arnold Avenue, Salina, Saline County, Kansas, 67401, United States (Storm ID: 5194)
+2026-04-26 23:19:03,005 - INFO - 💎 New Forensic Lead: LeFlore County, Oklahoma, 74937, United States (Storm ID: 5200)
+2026-04-26 23:19:04,290 - INFO - 💎 New Forensic Lead: State Highway 79 South, Lakeside City, Archer County, Texas, United States (Storm ID: 5201)
+2026-04-26 23:19:05,811 - INFO - 💎 New Forensic Lead: Cundiff, Jack County, Texas, United States (Storm ID: 5209)
+2026-04-26 23:19:07,344 - INFO - 💎 New Forensic Lead: Peaceful Place Road, Montgomery County, Arkansas, United States (Storm ID: 5213)
+2026-04-26 23:19:08,621 - INFO - 💎 New Forensic Lead: 3509, Corinthian Court, Arlington, Tarrant County, Texas, 76016, United States (Storm ID: 5231)
+2026-04-26 23:19:10,235 - INFO - 💎 New Forensic Lead: 1st Street, Elbing, Butler County, Kansas, 67114, United States (Storm ID: 5254)
+2026-04-26 23:19:11,803 - INFO - 💎 New Forensic Lead: East 12th Avenue, Stillwater, Payne County, Oklahoma, 74074, United States (Storm ID: 5267)
+2026-04-26 23:19:13,331 - INFO - 💎 New Forensic Lead: 2078, 16th Avenue, McPherson County, Kansas, 67460, United States (Storm ID: 5172)
+2026-04-26 23:19:14,508 - INFO - 💎 New Forensic Lead: Starbucks, East B Street, Hillsboro, Marion County, Kansas, 67063, United States (Storm ID: 5173)
+2026-04-26 23:19:15,673 - INFO - 💎 New Forensic Lead: East Wilder Street, Erie, Neosho County, Kansas, 66733, United States (Storm ID: 5175)
+2026-04-26 23:19:17,300 - INFO - 💎 New Forensic Lead: John G. Tower Elementary School, 5200, Hooper Drive, Expressway Village, Wichita Falls, Wichita County, Texas, 76306, United States (Storm ID: 5177)
+2026-04-26 23:19:18,425 - INFO - 💎 New Forensic Lead: County Road 32, Dade County, Missouri, 65603, United States (Storm ID: 5188)
+2026-04-26 23:19:19,620 - INFO - 💎 New Forensic Lead: 108, West Monroe Street, Walnut Grove, Greene County, Missouri, 65770, United States (Storm ID: 5189)
+2026-04-26 23:19:21,156 - INFO - 💎 New Forensic Lead: 1132 & 1134, Earley Street, Morrisville, Polk County, Missouri, 65710, United States (Storm ID: 5190)
+2026-04-26 23:19:22,690 - INFO - 💎 New Forensic Lead: Overland Road, McPherson County, Kansas, United States (Storm ID: 5192)
+2026-04-26 23:19:24,217 - INFO - 💎 New Forensic Lead: CR 150, Pontotoc County, Oklahoma, United States (Storm ID: 5198)
+2026-04-26 23:19:25,791 - INFO - 💎 New Forensic Lead: 98, Fenoglio Avenue, Wichita Falls, Wichita County, Texas, 76308, United States (Storm ID: 5199)
+2026-04-26 23:19:27,336 - INFO - 💎 New Forensic Lead: Pocahontas Trail, Clay County, Texas, 76302, United States (Storm ID: 5202)
+2026-04-26 23:19:28,514 - INFO - 💎 New Forensic Lead: 22665, South 4440 Road, Craig County, Oklahoma, 74301, United States (Storm ID: 5204)
+2026-04-26 23:19:30,039 - INFO - 💎 New Forensic Lead: 11901, West Central Park Court, West Ridge Estates, Wichita, Sedgwick County, Kansas, 67205, United States (Storm ID: 5205)
+2026-04-26 23:19:31,575 - INFO - 💎 New Forensic Lead: McDonald's, 1421, North West Street, Sunset Heights, Wichita, Sedgwick County, Kansas, 67212, United States (Storm ID: 5206)
+2026-04-26 23:19:33,103 - INFO - 💎 New Forensic Lead: Southside Road, Huddleston, Montgomery County, Arkansas, 71961, United States (Storm ID: 5207)
+2026-04-26 23:19:34,630 - INFO - 💎 New Forensic Lead: Montgomery County, Arkansas, United States (Storm ID: 5211)
+2026-04-26 23:19:36,245 - INFO - 💎 New Forensic Lead: 2694, County Road 3555, Cottondale, Wise County, Texas, 76073, United States (Storm ID: 5214)
+2026-04-26 23:19:37,771 - INFO - 💎 New Forensic Lead: Private Road 3472, Wise County, Texas, 76073, United States (Storm ID: 5218)
+2026-04-26 23:19:39,319 - INFO - 💎 New Forensic Lead: 718 Trail, Pawnee County, Nebraska, United States (Storm ID: 5220)
+2026-04-26 23:19:40,567 - INFO - 💎 New Forensic Lead: Mulberry Street, Ozan, Hempstead County, Arkansas, 71855, United States (Storm ID: 5225)
+2026-04-26 23:19:41,825 - INFO - 💎 New Forensic Lead: 826, North Street, Stamps, Lafayette County, Arkansas, 71860, United States (Storm ID: 5232)
+2026-04-26 23:19:42,831 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-26 23:34:42,854 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 63 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 214
+  [SPC] 81 significant events found.
+
+[SPC DONE] Inserted: 0 | Skipped (dupe): 81
+
+[2/2] Injecting Oklahoma field reports:
+  • 6 SSW Marion (4.0")
+  • Peabody (2.25")
+  • Elbing (2.0")
+  • 7 SSW Mayfield (3.5")
+  • 4 W Braman (3.75")
+  • 6 W Braman (3.0")
+  • 5 NW Deer Creek (2.75")
+  • 3 S Renfrow (2.5")
+  • 1 E Douglas (2.75")
+  • 822 County Road W (3.5")
+  • Thompsonchester (3.9")
+  • 4 NW Joplin (2.5")
+  • Bentonville Front (2.25")
+  • Enid North (3.0")
+  • Ponca City West (2.75")
+  • Stillwater North (2.0")
+  [SKIP] 6 SSW Marion already in DB for 2026-04-27
+  [SKIP] Peabody already in DB for 2026-04-27
+  [SKIP] Elbing already in DB for 2026-04-27
+  [SKIP] 7 SSW Mayfield already in DB for 2026-04-27
+  [SKIP] 4 W Braman already in DB for 2026-04-27
+  [SKIP] 6 W Braman already in DB for 2026-04-27
+  [SKIP] 5 NW Deer Creek already in DB for 2026-04-27
+  [SKIP] 3 S Renfrow already in DB for 2026-04-27
+  [SKIP] 1 E Douglas already in DB for 2026-04-27
+  [SKIP] 822 County Road W already in DB for 2026-04-27
+  [SKIP] Thompsonchester already in DB for 2026-04-27
+  [SKIP] 4 NW Joplin already in DB for 2026-04-27
+  [SKIP] Bentonville Front already in DB for 2026-04-27
+  [SKIP] Enid North already in DB for 2026-04-27
+  [SKIP] Ponca City West already in DB for 2026-04-27
+  [SKIP] Stillwater North already in DB for 2026-04-27
+
+[MANUAL DONE] Injected 0 Oklahoma field sites
+
+=======================================================
+  AUTHORITATIVE STORMS DB — CURRENT STATE
+=======================================================
+  Total Storm Events : 5,267
+  NOAA SWDI (live)   : 4,076
+  Field Reports      : 19
+  States Covered     : 57
+  Latest Event       : 24-JAN-26 20:25:00
+=======================================================
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-26 23:34:45,201 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-26 23:34:45,215 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-26 23:49:45,242 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 64 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 215
+  [SPC] 81 significant events found.
+
+[SPC DONE] Inserted: 0 | Skipped (dupe): 81
+
+[2/2] Injecting Oklahoma field reports:
+  • 6 SSW Marion (4.0")
+  • Peabody (2.25")
+  • Elbing (2.0")
+  • 7 SSW Mayfield (3.5")
+  • 4 W Braman (3.75")
+  • 6 W Braman (3.0")
+  • 5 NW Deer Creek (2.75")
+  • 3 S Renfrow (2.5")
+  • 1 E Douglas (2.75")
+  • 822 County Road W (3.5")
+  • Thompsonchester (3.9")
+  • 4 NW Joplin (2.5")
+  • Bentonville Front (2.25")
+  • Enid North (3.0")
+  • Ponca City West (2.75")
+  • Stillwater North (2.0")
+  [SKIP] 6 SSW Marion already in DB for 2026-04-27
+  [SKIP] Peabody already in DB for 2026-04-27
+  [SKIP] Elbing already in DB for 2026-04-27
+  [SKIP] 7 SSW Mayfield already in DB for 2026-04-27
+  [SKIP] 4 W Braman already in DB for 2026-04-27
+  [SKIP] 6 W Braman already in DB for 2026-04-27
+  [SKIP] 5 NW Deer Creek already in DB for 2026-04-27
+  [SKIP] 3 S Renfrow already in DB for 2026-04-27
+  [SKIP] 1 E Douglas already in DB for 2026-04-27
+  [SKIP] 822 County Road W already in DB for 2026-04-27
+  [SKIP] Thompsonchester already in DB for 2026-04-27
+  [SKIP] 4 NW Joplin already in DB for 2026-04-27
+  [SKIP] Bentonville Front already in DB for 2026-04-27
+  [SKIP] Enid North already in DB for 2026-04-27
+  [SKIP] Ponca City West already in DB for 2026-04-27
+  [SKIP] Stillwater North already in DB for 2026-04-27
+
+[MANUAL DONE] Injected 0 Oklahoma field sites
+
+=======================================================
+  AUTHORITATIVE STORMS DB — CURRENT STATE
+=======================================================
+  Total Storm Events : 5,267
+  NOAA SWDI (live)   : 4,076
+  Field Reports      : 19
+  States Covered     : 57
+  Latest Event       : 24-JAN-26 20:25:00
+=======================================================
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-26 23:49:46,702 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-26 23:49:46,709 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 00:04:46,725 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 67 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 218
+  [SPC] 81 significant events found.
+
+[SPC DONE] Inserted: 0 | Skipped (dupe): 81
+
+[2/2] Injecting Oklahoma field reports:
+  • 6 SSW Marion (4.0")
+  • Peabody (2.25")
+  • Elbing (2.0")
+  • 7 SSW Mayfield (3.5")
+  • 4 W Braman (3.75")
+  • 6 W Braman (3.0")
+  • 5 NW Deer Creek (2.75")
+  • 3 S Renfrow (2.5")
+  • 1 E Douglas (2.75")
+  • 822 County Road W (3.5")
+  • Thompsonchester (3.9")
+  • 4 NW Joplin (2.5")
+  • Bentonville Front (2.25")
+  • Enid North (3.0")
+  • Ponca City West (2.75")
+  • Stillwater North (2.0")
+  [SKIP] 6 SSW Marion already in DB for 2026-04-27
+  [SKIP] Peabody already in DB for 2026-04-27
+  [SKIP] Elbing already in DB for 2026-04-27
+  [SKIP] 7 SSW Mayfield already in DB for 2026-04-27
+  [SKIP] 4 W Braman already in DB for 2026-04-27
+  [SKIP] 6 W Braman already in DB for 2026-04-27
+  [SKIP] 5 NW Deer Creek already in DB for 2026-04-27
+  [SKIP] 3 S Renfrow already in DB for 2026-04-27
+  [SKIP] 1 E Douglas already in DB for 2026-04-27
+  [SKIP] 822 County Road W already in DB for 2026-04-27
+  [SKIP] Thompsonchester already in DB for 2026-04-27
+  [SKIP] 4 NW Joplin already in DB for 2026-04-27
+  [SKIP] Bentonville Front already in DB for 2026-04-27
+  [SKIP] Enid North already in DB for 2026-04-27
+  [SKIP] Ponca City West already in DB for 2026-04-27
+  [SKIP] Stillwater North already in DB for 2026-04-27
+
+[MANUAL DONE] Injected 0 Oklahoma field sites
+
+=======================================================
+  AUTHORITATIVE STORMS DB — CURRENT STATE
+=======================================================
+  Total Storm Events : 5,267
+  NOAA SWDI (live)   : 4,076
+  Field Reports      : 19
+  States Covered     : 57
+  Latest Event       : 24-JAN-26 20:25:00
+=======================================================
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 00:04:48,550 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:04:48,555 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 00:19:48,570 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 67 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 218
+  [SPC] 81 significant events found.
+
+[SPC DONE] Inserted: 0 | Skipped (dupe): 81
+
+[2/2] Injecting Oklahoma field reports:
+  • 6 SSW Marion (4.0")
+  • Peabody (2.25")
+  • Elbing (2.0")
+  • 7 SSW Mayfield (3.5")
+  • 4 W Braman (3.75")
+  • 6 W Braman (3.0")
+  • 5 NW Deer Creek (2.75")
+  • 3 S Renfrow (2.5")
+  • 1 E Douglas (2.75")
+  • 822 County Road W (3.5")
+  • Thompsonchester (3.9")
+  • 4 NW Joplin (2.5")
+  • Bentonville Front (2.25")
+  • Enid North (3.0")
+  • Ponca City West (2.75")
+  • Stillwater North (2.0")
+  [SKIP] 6 SSW Marion already in DB for 2026-04-27
+  [SKIP] Peabody already in DB for 2026-04-27
+  [SKIP] Elbing already in DB for 2026-04-27
+  [SKIP] 7 SSW Mayfield already in DB for 2026-04-27
+  [SKIP] 4 W Braman already in DB for 2026-04-27
+  [SKIP] 6 W Braman already in DB for 2026-04-27
+  [SKIP] 5 NW Deer Creek already in DB for 2026-04-27
+  [SKIP] 3 S Renfrow already in DB for 2026-04-27
+  [SKIP] 1 E Douglas already in DB for 2026-04-27
+  [SKIP] 822 County Road W already in DB for 2026-04-27
+  [SKIP] Thompsonchester already in DB for 2026-04-27
+  [SKIP] 4 NW Joplin already in DB for 2026-04-27
+  [SKIP] Bentonville Front already in DB for 2026-04-27
+  [SKIP] Enid North already in DB for 2026-04-27
+  [SKIP] Ponca City West already in DB for 2026-04-27
+  [SKIP] Stillwater North already in DB for 2026-04-27
+
+[MANUAL DONE] Injected 0 Oklahoma field sites
+
+=======================================================
+  AUTHORITATIVE STORMS DB — CURRENT STATE
+=======================================================
+  Total Storm Events : 5,267
+  NOAA SWDI (live)   : 4,076
+  Field Reports      : 19
+  States Covered     : 57
+  Latest Event       : 24-JAN-26 20:25:00
+=======================================================
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 00:19:50,338 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:19:50,343 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 00:34:50,268 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 68 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 219
+  [SPC] 81 significant events found.
+
+[SPC DONE] Inserted: 0 | Skipped (dupe): 81
+
+[2/2] Injecting Oklahoma field reports:
+  • 6 SSW Marion (4.0")
+  • Peabody (2.25")
+  • Elbing (2.0")
+  • 7 SSW Mayfield (3.5")
+  • 4 W Braman (3.75")
+  • 6 W Braman (3.0")
+  • 5 NW Deer Creek (2.75")
+  • 3 S Renfrow (2.5")
+  • 1 E Douglas (2.75")
+  • 822 County Road W (3.5")
+  • Thompsonchester (3.9")
+  • 4 NW Joplin (2.5")
+  • Bentonville Front (2.25")
+  • Enid North (3.0")
+  • Ponca City West (2.75")
+  • Stillwater North (2.0")
+  [SKIP] 6 SSW Marion already in DB for 2026-04-27
+  [SKIP] Peabody already in DB for 2026-04-27
+  [SKIP] Elbing already in DB for 2026-04-27
+  [SKIP] 7 SSW Mayfield already in DB for 2026-04-27
+  [SKIP] 4 W Braman already in DB for 2026-04-27
+  [SKIP] 6 W Braman already in DB for 2026-04-27
+  [SKIP] 5 NW Deer Creek already in DB for 2026-04-27
+  [SKIP] 3 S Renfrow already in DB for 2026-04-27
+  [SKIP] 1 E Douglas already in DB for 2026-04-27
+  [SKIP] 822 County Road W already in DB for 2026-04-27
+  [SKIP] Thompsonchester already in DB for 2026-04-27
+  [SKIP] 4 NW Joplin already in DB for 2026-04-27
+  [SKIP] Bentonville Front already in DB for 2026-04-27
+  [SKIP] Enid North already in DB for 2026-04-27
+  [SKIP] Ponca City West already in DB for 2026-04-27
+  [SKIP] Stillwater North already in DB for 2026-04-27
+
+[MANUAL DONE] Injected 0 Oklahoma field sites
+
+=======================================================
+  AUTHORITATIVE STORMS DB — CURRENT STATE
+=======================================================
+  Total Storm Events : 5,267
+  NOAA SWDI (live)   : 4,076
+  Field Reports      : 19
+  States Covered     : 57
+  Latest Event       : 24-JAN-26 20:25:00
+=======================================================
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 00:34:52,097 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:34:52,102 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 00:49:52,100 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 68 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 30 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 220
+  [SPC] 82 significant events found.
+  [74/82] 70.0" | 2 NW Dover, KS | (38.990,-95.970)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 00:49:58,811 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 00:49:58,815 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 01:04:58,828 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 70 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 32 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 224
+  [SPC] 84 significant events found.
+  [24/84] 1.75" | 4 NW Topeka, KS | (39.090,-95.730)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 01:05:06,961 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 01:05:06,962 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 01:05:06,972 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 01:20:06,974 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 71 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 33 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 226
+  [SPC] 85 significant events found.
+  [24/85] 1.75" | 4 NW Topeka, KS | (39.090,-95.730)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 01:20:14,494 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 01:20:14,494 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 01:20:14,494 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 01:20:14,494 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 01:20:14,494 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 01:20:14,494 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 01:20:14,495 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 01:20:14,495 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 01:20:14,495 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 01:20:14,495 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 01:20:14,508 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 02:41:58,413 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 78 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 38 raw reports
+  [SPC] yesterday_wind: 26 raw reports
+  [SPC] Total raw reports across 1 days: 238
+  [SPC] 90 significant events found.
+  [24/90] 1.75" | 4 NW Topeka, KS | (39.090,-95.730)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 02:42:05,622 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 02:42:05,632 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 05:10:08,837 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 85 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 42 raw reports
+  [SPC] yesterday_wind: 43 raw reports
+  [SPC] Total raw reports across 1 days: 266
+  [SPC] 100 significant events found.
+  [24/100] 1.75" | 4 NW Topeka, KS | (39.090,-95.730)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 05:25:28,901 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 05:25:28,906 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 06:48:35,999 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 2 raw reports
+  [SPC] yesterday_hail: 88 raw reports
+  [SPC] today_wind: 4 raw reports
+  [SPC] yesterday_wind: 44 raw reports
+  [SPC] Total raw reports across 1 days: 138
+  [SPC] 47 significant events found.
+  [8/47] 2.75" | 2 SSE El Dorado Springs, MO | (37.860,-94.010)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 06:48:43,085 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 06:48:43,095 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 07:42:05,964 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 0 raw reports
+  [SPC] yesterday_hail: 88 raw reports
+  [SPC] today_wind: 5 raw reports
+  [SPC] yesterday_wind: 44 raw reports
+  [SPC] Total raw reports across 1 days: 137
+  [SPC] 47 significant events found.
+  [8/47] 2.75" | 2 SSE El Dorado Springs, MO | (37.860,-94.010)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 07:42:12,722 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 07:42:12,738 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 10:37:42,626 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 10 raw reports
+  [SPC] yesterday_hail: 91 raw reports
+  [SPC] today_wind: 0 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 153
+  [SPC] 46 significant events found.
+  [8/46] 2.75" | 2 SSE El Dorado Springs, MO | (37.860,-94.010)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 10:37:51,713 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 10:37:51,714 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 10:37:51,723 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 13:45:33,139 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 33 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 18 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 199
+  [SPC] 57 significant events found.
+  [1/57] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 13:45:40,180 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 13:45:40,193 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 14:21:45,086 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 37 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 22 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 207
+  [SPC] 59 significant events found.
+  [1/59] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 14:21:51,826 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 14:21:51,833 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 14:36:51,837 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 41 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 22 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 211
+  [SPC] 59 significant events found.
+  [1/59] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 14:36:58,624 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 14:36:58,630 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 14:51:58,639 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 43 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 23 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 214
+  [SPC] 61 significant events found.
+  [1/61] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 14:52:06,083 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 14:52:06,089 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 15:07:06,090 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 44 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 25 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 217
+  [SPC] 62 significant events found.
+  [1/62] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 15:07:12,622 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:07:12,629 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 15:22:12,633 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 46 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 27 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 221
+  [SPC] 63 significant events found.
+  [1/63] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 15:22:21,278 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:22:21,285 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 15:37:21,293 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 49 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: HTTP 504
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 197
+  [SPC] 57 significant events found.
+  [1/57] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 15:37:38,520 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:37:38,527 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 15:52:38,603 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 51 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 29 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 228
+  [SPC] 65 significant events found.
+  [1/65] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 15:52:45,278 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 15:52:45,279 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 15:52:45,291 - INFO - 💤 Sleeping for 15 minutes until next sweep...
+2026-04-27 16:07:45,310 - INFO - 📡 Fetching latest SPC reports...
+=======================================================
+  ECH0-ROOF LIVE HAIL INGEST ENGINE
+=======================================================
+
+[1/2] Fetching NOAA SPC live hail — last 1 days (≥1.75")
+  [SPC] today_hail: 52 raw reports
+  [SPC] yesterday_hail: 96 raw reports
+  [SPC] today_wind: 30 raw reports
+  [SPC] yesterday_wind: 52 raw reports
+  [SPC] Total raw reports across 1 days: 230
+  [SPC] 66 significant events found.
+  [1/66] 1.75" | Holland, IN | (38.250,-87.040)
+Traceback (most recent call last):
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 673, in <module>
+    ingest_spc(days=args.days, min_size=args.min)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 571, in ingest_spc
+    insert_storm(conn, {
+    ~~~~~~~~~~~~^^^^^^^^
+        "event_date": event_date,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        "location_label": f"{magnitude}\" Hail — {location}, {hit['state_abbr']}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/Users/noone/.gemini/antigravity/scratch/roof_hunter/src/live_hail_ingest.py", line 410, in insert_storm
+    c.execute("""
+    ~~~~~~~~~^^^^
+        INSERT INTO storms (
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+        row.get("location_label", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: database is locked
+2026-04-27 16:07:51,888 - INFO - 📍 EPICENTER DETECTED: Braman, OKLAHOMA (74632) - 2 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 N Macksville, KANSAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 N Stamps, ARKANSAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 NE Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 NW Cherryvale, KANSAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 NW Iuka, KANSAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 NW Springtown, TEXAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 NW Westworth, TEXAS () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 S Arcola, MISSOURI () - 1 massive hits
+2026-04-27 16:07:51,889 - INFO - 📍 EPICENTER DETECTED: 1 S Lakeside City, TEXAS () - 1 massive hits
+2026-04-27 16:07:51,899 - INFO - 💤 Sleeping for 15 minutes until next sweep...

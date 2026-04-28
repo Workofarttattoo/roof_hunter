@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof Hunter | Premium Forensic Inspection Request</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #ca8a04;
+            --text-light: #f8fafc;
+            --text-dark: #334155;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--accent);
+        }
+
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: url('header.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: -100px auto 50px;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .opt-in-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .checkbox-container input {
+            margin-top: 4px;
+            transform: scale(1.2);
+        }
+
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #a16207;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .compliance-text {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ROOF HUNTER</div>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Satellite-Verified Roof Inspection</h1>
+        <p>Our forensic scanner detected potential damage on your roof. Request a free physical verification in under 60 seconds.</p>
+    </div>
+</section>
+
+<div class="form-container">
+    <form action="#">
+        <div class="form-group">
+            <label>Physical Address</label>
+            <input type="text" placeholder="123 High St, Nichols Hills, OK" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Homeowner Name</label>
+            <input type="text" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="(555) 000-0000" required>
+        </div>
+
+        <div class="opt-in-box">
+            <label class="checkbox-container">
+                <input type="checkbox" required checked>
+                <span>
+                    <strong>I consent to the Roof Hunter Outreach Program.</strong><br>
+                    By checking this box, I provide my express written signature consenting to receive marketing and informational text messages and voice calls (including those using automated AI technology) from Roof Hunter at the number provided above. 
+                </span>
+            </label>
+            <div class="compliance-text">
+                Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. 
+                Reply <strong>STOP</strong> to opt-out at any time. View our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="opt_in_submit">REQUEST ASAP INSPECTION</button>
+    </form>
+</div>
+
+<footer>
+    &copy; 2026 Roof Hunter Forensic Intelligence. All rights reserved.
+</footer>
+
+</body>
+</html>

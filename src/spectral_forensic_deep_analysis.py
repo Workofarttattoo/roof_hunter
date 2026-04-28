@@ -93,6 +93,13 @@ def perform_deep_spectral_analysis(lat, lon, event_date_str, city="Target", proj
         print("\n[NO SIGNAL]")
         print("Spectral data shows minimal surface change. Structure may be high-integrity.")
     print("#"*80)
+    
+    return {
+        "dnbr": dnbr,
+        "dndvi": dndvi,
+        "score": anomaly_score,
+        "severity": severity
+    }
 
 if __name__ == "__main__":
     import sys

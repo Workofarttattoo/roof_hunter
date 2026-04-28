@@ -15,7 +15,7 @@ def harvest_national_visuals():
     conn = sqlite3.connect('authoritative_storms.db')
     
     # Target top most hit states
-    target_states = ('TEXAS', 'ALABAMA', 'ILLINOIS', 'KANSAS', 'OKLAHOMA')
+    target_states = ('TEXAS', 'ALABAMA', 'ILLINOIS', 'KANSAS', 'OKLAHOMA', 'NEBRASKA')
     
     # Select the top 10 most severe 2026 events 
     query = """

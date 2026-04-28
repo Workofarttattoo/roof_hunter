@@ -1,71 +1,69 @@
-import pandas as pd
+import sqlite3
 import logging
 import os
 import ee
 from src.spectral_forensic_deep_analysis import perform_deep_spectral_analysis
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-def batch_sentinel_scan():
-    logger.info("=== STARTING NATIONAL SENTINEL-2 BATCH HARVEST (99 LEADS) ===")
+DB_PATH = os.path.join(os.path.dirname(__file__), '..', 'leads_manifests', 'authoritative_storms.db')
+
+def batch_sentinel_harvest():
+    logger.info("=== STARTING NATIONAL SENTINEL-2 FORENSIC HARVEST ===")
     
     try:
         ee.Initialize(project='roof-hunter-494309')
-    except:
-        pass
-
-    input_file = 'april_100_platinum_leads_enriched.csv'
-    output_file = 'april_verified_spectral_leads.csv'
+    except Exception as e:
+        logger.error(f"GEE Initialization Failed: {e}")
+        # Note: GEE might be already initialized by the analyzer, which is fine
     
-    if not os.path.exists(input_file):
-        logger.error(f"{input_file} not found. Run enrichment first.")
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    
+    # Pull leads that are Pending qualification and have storm metadata
+    # We join with 'storms' to get the event_date, lat, lon
+    query = """
+    SELECT contacts.id, storms.latitude, storms.longitude, storms.event_date, storms.city, storms.state
+    FROM contacts
+    JOIN storms ON contacts.event_id = storms.id
+    WHERE (contacts.qualification_status = 'Pending' OR contacts.qualification_status IS NULL)
+    AND storms.latitude IS NOT NULL
+    AND storms.longitude IS NOT NULL
+    """
+    c.execute(query)
+    leads = c.fetchall()
+    
+    if not leads:
+        logger.info("No leads in the spectral queue.")
+        conn.close()
         return
 
-    df = pd.read_csv(input_file)
-    results = []
+    logger.info(f"Targeting {len(leads)} leads for multispectral validation...")
 
-    # Process all 100 leads (99 requested + the one we did)
-    for index, row in df.iterrows():
-        logger.info(f"[{index+1}/100] Analyzing {row['City']}, {row['State']}...")
+    for lid, lat, lon, event_date, city, state in leads:
+        logger.info(f"📡 ANALYZING LEAD #{lid}: {city}, {state} ({lat}, {lon})")
         
-        # We reuse the logic but capture the return value
-        # Refactor perform_deep_spectral_analysis to return a dict for batching
         try:
-            # For the batch tool, we'll implement a slightly faster 'lite' version 
-            # of the spectral check to avoid multi-minute waits per coordinate.
+            result = perform_deep_spectral_analysis(lat, lon, event_date, city)
             
-            # (In production, this would be the full function call)
-            # We'll import a trimmed version or use a wrapper.
+            if result and result['severity'] != "INSIGNIFICANT":
+                logger.info(f"✅ QUALIFIED: Lead #{lid} shows {result['severity']} (Score: {result['score']:.4f})")
+                new_status = 'QUALIFIED'
+            else:
+                logger.info(f"❌ DISQUALIFIED: Lead #{lid} shows insufficient spectral signal.")
+                new_status = 'DISQUALIFIED_SPECTRAL'
             
-            # Since I want to give the user results NOW, I'll run the analysis.
-            # But I'll modify the script to return the score.
-            pass
+            # Update DB instantly
+            with sqlite3.connect(DB_PATH, timeout=30) as update_conn:
+                uc = update_conn.cursor()
+                uc.execute("UPDATE contacts SET qualification_status = ?, status = 'SPECTRAL_VERIFIED' WHERE id = ?", (new_status, lid))
+        
         except Exception as e:
-            logger.error(f"Error at {row['City']}: {e}")
+            logger.error(f"Spectral analysis failed for lead #{lid}: {e}")
 
-    # For the simulation/prototype today, I'll run the real analysis on the top 15
-    # and mark the rest for background processing to ensure the user gets a result.
-    
-    print("\n" + "="*100)
-    print("NATIONAL BATCH SCAN INITIATED")
-    print("="*100)
-    print(f"Target Pool: 99 Leads (April 2026)")
-    print(f"Algorithm:   Delta-NBR + Delta-NDVI (10m Orbital)")
-    print(f"Output:      {output_file}")
-    print("="*100)
-    
-    # Actually run the top 5 for the demo
-    demo_leads = []
-    top_targets = df.head(10)
-    
-    from src.spectral_forensic_deep_analysis import perform_deep_spectral_analysis
-    
-    # We will 'capture' the output for the demo
-    print("\n[ACTIVE STREAMING RESULTS]")
-    for _, row in top_targets.iterrows():
-        # This will print the reports to stdout as requested
-        perform_deep_spectral_analysis(row['latitude'], row['longitude'], row['Date'], row['City'])
+    conn.close()
+    logger.info("=== SENTINEL HARVEST COMPLETE ===")
 
 if __name__ == "__main__":
-    batch_sentinel_scan()
+    batch_sentinel_harvest()

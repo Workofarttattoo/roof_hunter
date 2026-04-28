@@ -1,319 +1,289 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Search, MapPin, Wind, Heart, TrendingUp, AlertTriangle, Phone, Mail, User, ShieldCheck, MessageSquare, Briefcase } from 'lucide-react';
+import { 
+  Search, MapPin, Wind, TrendingUp, AlertTriangle, Phone, Mail, User, 
+  ShieldCheck, MessageSquare, ShoppingBag, Zap, LayoutDashboard, Lock, ChevronRight,
+  Filter, Home, Calendar, Layers, CheckCircle2, XCircle, Clock
+} from 'lucide-react';
+import './App.css';
 
-const API_BASE = "http://127.0.0.1:8000";
-const GOOGLE_MAPS_KEY = "AIzaSyDkaKopClqI80_60jnbwzGcnUWG7MF8nFg";
+const API_BASE = "https://fusvj-2600-8801-3302-a800-109b-ac94-745-66ee.run.pinggy-free.link";
 
 function App() {
-  const [storms, setStorms] = useState([]);
-  const [stats, setStats] = useState({ total_events_tracked: 0, states_affected: 0, total_leads: 0, total_contacts: 0 });
-  const [loading, setLoading] = useState(false);
-  const [deepScanResults, setDeepScanResults] = useState({});
-  const [selectedProperty, setSelectedProperty] = useState(null);
-  const [propertyData, setPropertyData] = useState(null);
-  const [mapInitialized, setMapInitialized] = useState(false);
-  const [corridorRisk, setCorridorRisk] = useState([]);
-  
-  // Filters
-  const [stateFilter, setStateFilter] = useState('');
-  const [minIncome, setMinIncome] = useState('');
-  const [minHail, setMinHail] = useState('');
+  const [marketLeads, setMarketLeads] = useState([]);
+  const [selectedState, setSelectedState] = useState('ALL');
+  const [activeTab, setActiveTab] = useState('marketplace');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [zipFilter, setZipFilter] = useState('');
+  const [materialFilter, setMaterialFilter] = useState('ALL');
+  const [isQualifying, setIsQualifying] = useState(null);
 
-  const fetchStorms = async () => {
-    setLoading(true);
-    try {
-      const params = { limit: 100 };
-      if (stateFilter) params.state = stateFilter;
-      if (minIncome) params.min_income = minIncome;
-      if (minHail) params.min_hail = minHail;
-      
-      const res = await axios.get(`${API_BASE}/api/leads`, { params });
-      setStorms(res.data.data || []);
-    } catch (e) {
-      console.error('Leads fetch error:', e);
-      setStorms([]);
-    }
-    setLoading(false);
-  };
+  const fetchLeads = () => {
+    const params = new URLSearchParams();
+    if (searchQuery) params.append('q', searchQuery);
+    if (zipFilter) params.append('zip', zipFilter);
+    if (materialFilter !== 'ALL') params.append('material', materialFilter);
 
-  const triggerDeepScan = async (leadId) => {
-    try {
-      const res = await axios.post(`${API_BASE}/api/leads/deep-scan`, { lead_id: leadId });
-      setDeepScanResults(prev => ({ ...prev, [leadId]: res.data.damage_assessment || res.data.message }));
-    } catch (e) {
-      console.error('Deep scan error:', e);
-    }
-  };
-
-  const fetchStats = async () => {
-    try {
-      const res = await axios.get(`${API_BASE}/api/stats`);
-      setStats(res.data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  const fetchCorridorRisk = async () => {
-    try {
-      const res = await axios.get(`${API_BASE}/api/corridor-forecast`);
-      setCorridorRisk(res.data.sites || []);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  const fetchPropertyValuation = async (address) => {
-    try {
-      const res = await axios.get(`${API_BASE}/api/property-data`, { params: { address } });
-      if (res.data.status === 'success') {
-        setPropertyData(res.data.data.value);
-      }
-    } catch (e) {
-      console.error('RentCast fetch error:', e);
-    }
+    fetch(`${API_BASE}/api/leads/teasers?${params.toString()}`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          setMarketLeads(data);
+        }
+      })
+      .catch(err => console.error("Marketplace fetch error:", err));
   };
 
   useEffect(() => {
-    fetchStats();
-    fetchStorms();
-    fetchCorridorRisk();
+    fetchLeads();
+  }, [searchQuery, zipFilter, materialFilter]);
 
-    // Map initialization logic from snippet
-    const setupMap = async () => {
-      await customElements.whenDefined('gmp-map');
-      const placePicker = document.querySelector('gmpx-place-picker');
-      const map = document.querySelector('gmp-map');
-      const marker = document.querySelector('gmp-advanced-marker');
-      
-      if (!placePicker || !map || !marker) return;
+  const handleQualify = async (leadId) => {
+    setIsQualifying(leadId);
+    try {
+      await axios.post(`${API_BASE}/api/leads/qualify`, { lead_id: leadId });
+      fetchLeads(); // Refresh data
+    } catch (err) {
+      console.error("Qualify error:", err);
+    } finally {
+      setIsQualifying(null);
+    }
+  };
 
-      placePicker.addEventListener('gmpx-placechange', () => {
-        const place = placePicker.value;
-        if (!place || !place.location) {
-            setSelectedProperty(null);
-            setPropertyData(null);
-            return;
-        }
+  const groupedLeads = marketLeads.reduce((acc, lead) => {
+    const state = lead.state || 'UNKNOWN';
+    if (!acc[state]) acc[state] = [];
+    acc[state].push(lead);
+    return acc;
+  }, {});
 
-        setSelectedProperty({
-          name: place.displayName,
-          address: place.formattedAddress,
-          lat: place.location.lat,
-          lng: place.location.lng
-        });
-        
-        fetchPropertyValuation(place.formattedAddress);
+  const availableStates = Object.keys(groupedLeads).sort();
+  const stateTabs = ['ALL', ...availableStates];
 
-        if (place.viewport) {
-           map.innerMap.fitBounds(place.viewport);
-        } else {
-           map.center = place.location;
-           map.zoom = 17;
-        }
-        marker.position = place.location;
-      });
-      setMapInitialized(true);
-    };
-
-    setupMap();
-  }, []);
+  const getStatusIcon = (status) => {
+    switch (status) {
+      case 'QUALIFIED': return <CheckCircle2 size={12} className="status-icon-plus success" />;
+      case 'REJECTED': return <XCircle size={12} className="status-icon-plus error" />;
+      case 'NO_ANSWER': return <Clock size={12} className="status-icon-plus warning" />;
+      default: return <Clock size={12} className="status-icon-plus pending" />;
+    }
+  };
 
   return (
-    <div className="dashboard-container">
-      <header className="header">
-        <div className="logo-container">
-          <h1>ECH0-ROOF</h1>
-          <p>Socioeconomic Intelligence & Autonomous Lead Routing</p>
-        </div>
-        <div className="stats-container">
-          <div className="stat-pill">
-            <AlertTriangle size={16} color="#38bdf8" />
-            <span>Tracking <strong>{stats.total_events_tracked.toLocaleString()}</strong> Storm Events</span>
-          </div>
-          <div className="stat-pill">
-            <MapPin size={16} color="#818cf8" />
-            <span>Across <strong>{stats.states_affected}</strong> States</span>
-          </div>
-          <div className="stat-pill">
-            <User size={16} color="#4ade80" />
-            <span><strong>{(stats.total_leads || 0).toLocaleString()}</strong> Verified Leads</span>
+    <div className="roof-hunter-app">
+      <header className="app-header glass">
+        <div className="logo">
+          <Zap className="logo-icon neon-flicker" />
+          <div className="logo-text">
+            <h1>ROOF HUNTER</h1>
+            <span className="beta-tag">CAT-5 FORENSICS</span>
           </div>
         </div>
+        <nav className="nav-tabs">
+          <button 
+            className={`nav-btn ${activeTab === 'dashboard' ? 'active' : ''}`}
+            onClick={() => setActiveTab('dashboard')}
+          >
+            <LayoutDashboard size={18} /> COMMAND CENTER
+          </button>
+          <button 
+            className={`nav-btn ${activeTab === 'marketplace' ? 'active' : ''}`}
+            onClick={() => setActiveTab('marketplace')}
+          >
+            <ShoppingBag size={18} /> LEAD MARKETPLACE
+          </button>
+        </nav>
       </header>
 
-      <gmpx-api-loader 
-        key={GOOGLE_MAPS_KEY} 
-        solution-channel="GMP_GE_mapsandplacesautocomplete_v2">
-      </gmpx-api-loader>
-
-      <section className="inspection-chamber">
-        <div className="inspection-header">
-           <h2><Search size={20} color="#38bdf8"/> Deep-Target Forensic Inspection</h2>
-           {selectedProperty && (
-             <button className="search-btn" style={{height: '36px'}} onClick={() => triggerDeepScan('manual')}>
-               Scan Property
-             </button>
-           )}
-        </div>
-        <div className="map-viewport">
-          <gmp-map center="36.92,-97.41" zoom="12" map-id="DEMO_MAP_ID">
-            <div slot="control-block-start-inline-start" className="place-picker-container">
-              <gmpx-place-picker placeholder="Enter property address for manual deep scan..."></gmpx-place-picker>
-            </div>
-            <gmp-advanced-marker></gmp-advanced-marker>
-          </gmp-map>
-        </div>
-        {selectedProperty && (
-          <div className="inspection-stats">
-             <div className="inspected-property-card">
-               <span className="property-name">{selectedProperty.name}</span>
-               <span className="property-addr">{selectedProperty.address}</span>
-             </div>
-             {propertyData && (
-                <div className="stat-pill" style={{borderColor: '#4ade80'}}>
-                   <strong>VALUE:</strong> ${propertyData.value?.toLocaleString() || 'N/A'}
-                </div>
-             )}
-             <div className="stat-pill">
-               <strong>LAT:</strong> {selectedProperty.lat?.toFixed(4)}
-             </div>
-             <div className="stat-pill">
-               <strong>LNG:</strong> {selectedProperty.lng?.toFixed(4)}
-             </div>
-          </div>
-        )}
-      </section>
-
-      {corridorRisk.length > 0 && (
-         <div className="threat-banner" style={{marginBottom: '2rem', background: 'rgba(56, 189, 248, 0.1)', color: '#38bdf8'}}>
-            <AlertTriangle size={18} />
-            <strong>STORM CORRIDOR ALERT:</strong> {corridorRisk.length} Priority Target Zones Detected in KS/OK Path
-         </div>
-      )}
-
-      <section className="search-bar">
-        <div className="filter-group">
-          <label>State Abbreviation</label>
-          <input 
-            type="text" 
-            placeholder="e.g. TX, FL, OK" 
-            value={stateFilter} 
-            onChange={(e) => setStateFilter(e.target.value)}
-          />
-        </div>
-        <div className="filter-group">
-          <label>Min Household Income ($)</label>
-          <input 
-            type="number" 
-            placeholder="e.g. 75000" 
-            value={minIncome} 
-            onChange={(e) => setMinIncome(e.target.value)}
-          />
-        </div>
-        <div className="filter-group">
-          <label>Min Hail / Wind Magnitude</label>
-          <input 
-            type="number" 
-            placeholder="e.g. 1.5" 
-            step="0.5"
-            value={minHail} 
-            onChange={(e) => setMinHail(e.target.value)}
-          />
-        </div>
-        <button className="search-btn" onClick={fetchStorms}>
-          Analyze Datalake
-        </button>
-      </section>
-
-      <h2 className="results-header">High-Confidence Homeowner Leads ({storms.length} Found)</h2>
-      
-      {loading ? (
-        <div className="loader">Running GEOBIA Physics Algorithms...</div>
-      ) : (
-        <div className="grid-container">
-          {storms.map((storm) => (
-            <div className={`lead-card tier-${storm.tier?.toLowerCase()}`} key={storm.id}>
-              {storm.tier && <div className="tier-badge">{storm.tier} LEAD</div>}
-              {(storm.deep_scan_result || deepScanResults[storm.id]) && (
-                <div className="deep-scan-overlay">
-                  <TrendingUp size={12} /> {deepScanResults[storm.id] || storm.deep_scan_result}
-                </div>
-              )}
-              {storm.image_url && (
-                <div className="satellite-preview">
-                  <img src={storm.image_url} alt="Roof Evidence" />
-                  {storm.street_view_url && (
-                    <div className="street-view-pip">
-                        <img src={storm.street_view_url} alt="Street View" />
-                    </div>
-                  )}
-                  <div className="image-overlay">XGBoost Damage Confirmed</div>
-                </div>
-              )}
-              
-              <div className="card-header">
-                <span className="zip-badge">{storm.zipcode || "ZONE"}</span>
-                <span className="date-text">{storm.event_date}</span>
+      <main className="main-content">
+        {activeTab === 'marketplace' ? (
+          <section className="marketplace-section fade-in">
+            <div className="section-header-block">
+              <div className="title-block">
+                <h2><ShoppingBag size={32} className="title-icon" /> National Lead Marketplace</h2>
+                <p>Browse verified forensic leads. Unlock addresses for full homeowner intelligence.</p>
               </div>
               
-              <h3 className="location-title">{storm.city}, {storm.state}</h3>
-              
-              {storm.homeowner_name && (
-                <div className="contact-info-panel">
-                  <div className="lead-owner"><User size={16}/> {storm.homeowner_name}</div>
-                  <div className="lead-contact"><Phone size={14}/> {storm.phone_number}</div>
-                  <div className="lead-contact"><Mail size={14}/> {storm.email}</div>
-                  <div className="lead-contact"><Briefcase size={14}/> {storm.insurance_company || 'Unknown Carrier'}</div>
+              <div className="search-filter-bar glass-premium">
+                <div className="search-input-wrapper">
+                  <Search className="search-icon" size={18} />
+                  <input 
+                    type="text" 
+                    placeholder="Search by City, State, or Zip..." 
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="premium-search-input"
+                  />
+                </div>
+                
+                <div className="filters-group">
+                  <div className="filter-item">
+                    <MapPin size={16} />
+                    <input 
+                      type="text" 
+                      placeholder="Zip Code" 
+                      value={zipFilter}
+                      onChange={(e) => setZipFilter(e.target.value)}
+                      className="filter-input-small"
+                    />
+                  </div>
                   
-                  <div className="lead-status-row">
-                    <span className={`status-pill status-${storm.status?.toLowerCase().replace(' ', '-')}`}>
-                        {storm.status}
-                    </span>
-                    <div className="action-icons">
-                        <button className="sms-btn" onClick={() => triggerDeepScan(storm.id)} title="Run Deep Scan Forensics">
-                            <TrendingUp size={14} />
-                        </button>
-                        <button className="sms-btn" title="Send SMS">
-                            <MessageSquare size={14} />
-                        </button>
-                    </div>
+                  <div className="filter-item">
+                    <Layers size={16} />
+                    <select 
+                      value={materialFilter} 
+                      onChange={(e) => setMaterialFilter(e.target.value)}
+                      className="filter-select"
+                    >
+                      <option value="ALL">All Materials</option>
+                      <option value="Metal">Metal</option>
+                      <option value="Asphalt">Asphalt</option>
+                      <option value="Tile">Tile</option>
+                    </select>
                   </div>
                 </div>
+              </div>
+
+              <div className="state-selector-row">
+                <div className="state-filters glass">
+                  {stateTabs.map(s => (
+                    <button 
+                      key={s} 
+                      className={`state-tab ${selectedState === s ? 'active' : ''}`}
+                      onClick={() => setSelectedState(s)}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="leads-grid">
+              {Object.entries(groupedLeads)
+                .filter(([state]) => selectedState === 'ALL' || selectedState === state)
+                .map(([state, leads]) => (
+                  <div key={state} className="state-group">
+                    <h3 className="state-divider">
+                      <span>{state}</span>
+                      <span className="count-pill">{leads.length} AVAILABLE</span>
+                    </h3>
+                    <div className="cards-container">
+                      {leads.map(lead => (
+                        <div key={lead.id} className="lead-card glass-premium">
+                          <div className="card-top-row">
+                            <div className="badges-group">
+                              <div className={`status-badge ${lead.damage_score >= 40 ? 'total-loss' : 'platinum'}`}>
+                                {lead.damage_score >= 40 ? 'TOTAL LOSS' : 'PLATINUM'}
+                              </div>
+                              <div className={`qual-badge ${lead.qualification_status?.toLowerCase().replace('_', '-') || 'pending'}`}>
+                                {getStatusIcon(lead.qualification_status)}
+                                {lead.qualification_status || 'PENDING AI CALL'}
+                              </div>
+                            </div>
+                            <div className="storm-stat">
+                              <Wind size={14} /> {lead.magnitude.toFixed(2)}"
+                            </div>
+                          </div>
+                          
+                          <div className="damage-viz">
+                            <div className="damage-ring">
+                              <svg viewBox="0 0 36 36" className="circular-chart">
+                                <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path 
+                                  className={`circle ${lead.damage_score >= 40 ? 'loss-color' : 'platinum-color'}`} 
+                                  strokeDasharray={`${lead.damage_score}, 100`} 
+                                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
+                                />
+                                <text x="18" y="20.35" className="percentage">{lead.damage_score.toFixed(0)}%</text>
+                              </svg>
+                            </div>
+                            <div className="viz-label">AI VERIFIED DAMAGE</div>
+                          </div>
+
+                          <div className="lead-details">
+                            <div className="address-teaser">
+                              <Lock size={14} className="lock-icon" />
+                              <span>{lead.redacted_address}, {lead.city}</span>
+                            </div>
+                            
+                            <div className="lead-traits">
+                              <div className="trait">
+                                <MapPin size={12} /> {lead.zip_code || lead.zipcode}
+                              </div>
+                              <div className="trait">
+                                <Layers size={12} /> {lead.material_interest || 'Replace'}
+                              </div>
+                              <div className="trait">
+                                <Calendar size={12} /> {lead.timeline || 'Within 6 months'}
+                              </div>
+                            </div>
+
+                            {lead.call_log ? (
+                              <div className="call-log-box glass-inset">
+                                <div className="log-header">
+                                  <Phone size={10} /> AI AGENT CALL LOG
+                                </div>
+                                <p>{lead.call_log}</p>
+                              </div>
+                            ) : (
+                              <div className="proof-box glass-inset">
+                                <MessageSquare size={12} className="quote-icon" />
+                                <p>{lead.proof_msg || "Catastrophic structural disruption verified via spectral imagery scan."}</p>
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="actions-row">
+                            {lead.qualification_status === 'PENDING' ? (
+                              <button 
+                                className="qualify-btn" 
+                                onClick={() => handleQualify(lead.id)}
+                                disabled={isQualifying === lead.id}
+                              >
+                                {isQualifying === lead.id ? (
+                                  <span className="pulse-mini"></span>
+                                ) : (
+                                  <Phone size={14} />
+                                )}
+                                TRIGGER AI COLD CALL
+                              </button>
+                            ) : null}
+                            <button className="purchase-btn-neon">
+                              <ChevronRight size={20} /> UNLOCK LEAD $149
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              
+              {marketLeads.length === 0 && (
+                <div className="no-results glass">
+                  <AlertTriangle size={48} />
+                  <h3>No leads found matching your search filters.</h3>
+                  <p>Try broadening your search or adjusting the state selection.</p>
+                </div>
               )}
-
-              <div className="threat-banner">
-                <Wind size={18} />
-                {storm.magnitude}" {storm.event_type}
-              </div>
-              
-              <div className="proof-container">
-                <ShieldCheck size={14} color="#4ade80" />
-                <span className="proof-text">{storm.proof_msg || "Socio-Economic Filter Active"}</span>
-              </div>
-
-              <div className="stats-grid">
-                <div className="stat-item">
-                  <span className="stat-label">Med. Home Value</span>
-                  <span className="stat-value">${storm.median_home_value?.toLocaleString() || 'N/A'}</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-label">Med. Income</span>
-                  <span className="stat-value">${storm.median_household_income?.toLocaleString() || 'N/A'}</span>
-                </div>
-              </div>
-              
-              <button className="action-btn">Generate Sales Packet</button>
             </div>
-          ))}
-          {storms.length === 0 && !loading && (
-            <div className="no-leads">
-                 <p>No high-value verified damage zones found. Adjust filters to broaden search.</p>
-            </div>
-          )}
+          </section>
+        ) : (
+          <div className="dashboard-placeholder glass">
+            <h2>COMMAND CENTER</h2>
+            <p>Select the Marketplace to view high-value forensic leads.</p>
+          </div>
+        )}
+      </main>
+
+      <footer className="footer-bar glass">
+        <div className="system-status">
+          <span className="pulse"></span> System Live: National Forensic Intelligence Active
         </div>
-      )}
+        <div className="user-info">
+          <ShieldCheck size={14} /> SECURE GATEWAY ENABLED
+        </div>
+      </footer>
     </div>
   );
 }
