@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roof Hunter Pro | Storm-Damage Roofing Leads</title>
+  <meta name="description" content="Roof Hunter Pro connects storm-damage homeowners with qualified roofing contractors and helps route high-intent insurance-related roofing opportunities." />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      --bg: #07111f;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent2: #f97316;
+      --good: #22c55e;
+      --danger: #ef4444;
+      --line: rgba(255,255,255,.16);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(56,189,248,.25), transparent 35%),
+        radial-gradient(circle at 80% 0%, rgba(249,115,22,.22), transparent 30%),
+        linear-gradient(135deg, #020617 0%, var(--bg) 52%, #111827 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 22px 0; border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); position: sticky; top: 0; background: rgba(2,6,23,.72); z-index: 3; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: -.03em; }
+    .mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 14px; background: linear-gradient(135deg, var(--accent), var(--accent2)); box-shadow: 0 16px 48px rgba(56,189,248,.22); }
+    .navlinks { display: flex; gap: 18px; align-items: center; color: var(--muted); font-size: 14px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; border: 0; border-radius: 999px; padding: 13px 18px; background: linear-gradient(135deg, var(--accent2), #facc15); color: #111827; font-weight: 900; text-decoration: none; cursor: pointer; box-shadow: 0 16px 44px rgba(249,115,22,.22); }
+    .btn.secondary { background: rgba(255,255,255,.1); color: var(--text); border: 1px solid var(--line); box-shadow: none; }
+    .hero { padding: 78px 0 46px; display: grid; grid-template-columns: 1.08fr .92fr; gap: 34px; align-items: center; }
+    .badge { display: inline-flex; gap: 8px; align-items: center; color: #bae6fd; background: rgba(56,189,248,.12); border: 1px solid rgba(56,189,248,.3); border-radius: 999px; padding: 8px 12px; font-size: 14px; font-weight: 700; }
+    h1 { margin: 18px 0; font-size: clamp(40px, 6vw, 76px); line-height: .93; letter-spacing: -.07em; }
+    .lead { color: var(--muted); font-size: clamp(18px, 2vw, 22px); line-height: 1.55; max-width: 720px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .panel { background: linear-gradient(180deg, var(--card2), var(--card)); border: 1px solid var(--line); border-radius: 28px; padding: 24px; box-shadow: 0 28px 90px rgba(0,0,0,.28); }
+    form { display: grid; gap: 12px; }
+    label { font-size: 13px; color: var(--muted); font-weight: 700; }
+    input, select, textarea { width: 100%; border: 1px solid var(--line); background: rgba(15,23,42,.78); color: var(--text); border-radius: 14px; padding: 13px 14px; font: inherit; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(56,189,248,.14); }
+    textarea { min-height: 88px; resize: vertical; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+    .card { background: rgba(255,255,255,.07); border: 1px solid var(--line); border-radius: 22px; padding: 22px; }
+    .card strong { display: block; font-size: 18px; margin-bottom: 8px; }
+    .card p, .small { color: var(--muted); line-height: 1.55; margin: 0; }
+    section { padding: 48px 0; }
+    h2 { font-size: clamp(30px, 4vw, 48px); line-height: 1; letter-spacing: -.05em; margin: 0 0 16px; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+    .list { display: grid; gap: 12px; }
+    .item { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); }
+    .check { flex: none; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: rgba(34,197,94,.16); color: #86efac; font-weight: 900; }
+    .cta { text-align: center; padding: 50px 24px; border-radius: 32px; background: linear-gradient(135deg, rgba(56,189,248,.18), rgba(249,115,22,.18)); border: 1px solid var(--line); }
+    footer { color: var(--muted); padding: 34px 0 54px; border-top: 1px solid var(--line); font-size: 14px; }
+    @media (max-width: 860px) {
+      .hero, .split, .grid { grid-template-columns: 1fr; }
+      .navlinks { display: none; }
+      header { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <div class="logo"><span class="mark">🏠</span><span>Roof Hunter Pro</span></div>
+      <div class="navlinks">
+        <a href="#contractors">For Roofers</a>
+        <a href="#homeowners">For Homeowners</a>
+        <a class="btn secondary" href="#lead-form">Get Leads</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="badge">⚡ Storm-damage lead routing for roofers</span>
+        <h1>Turn hail storms into qualified roofing opportunities.</h1>
+        <p class="lead">Roof Hunter Pro helps connect storm-damage homeowners with responsive roofing contractors. We prioritize high-intent, insurance-aware leads so roofing teams can move fast after hail and wind events.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#lead-form">I want roofing leads</a>
+          <a class="btn secondary" href="#homeowners">I need roof help</a>
+        </div>
+      </div>
+      <aside class="panel" id="lead-form">
+        <h2 style="font-size:32px;margin-bottom:10px;">Start the lead flow</h2>
+        <p class="small" style="margin-bottom:18px;">Tell us who you are. We’ll route the next step based on your market and urgency.</p>
+        <form action="https://formspree.io/f/xwkgyyvp" method="POST">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input id="company" name="company" placeholder="Company name" />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" placeholder="Best callback number" required />
+          </div>
+          <div>
+            <label for="type">I am a...</label>
+            <select id="type" name="type" required>
+              <option value="Roofing contractor">Roofing contractor</option>
+              <option value="Homeowner with storm damage">Homeowner with storm damage</option>
+              <option value="Insurance / restoration partner">Insurance / restoration partner</option>
+            </select>
+          </div>
+          <div>
+            <label for="market">Market</label>
+            <input id="market" name="market" placeholder="City / county / state" />
+          </div>
+          <div>
+            <label for="message">What do you need?</label>
+            <textarea id="message" name="message" placeholder="Example: I need high-intent hail leads in OKC or Dallas this week."></textarea>
+          </div>
+          <button class="btn" type="submit">Send request</button>
+          <p class="small">No spam. Fast routing. Built for storm response.</p>
+        </form>
+      </aside>
+    </section>
+
+    <section class="grid" aria-label="Key benefits">
+      <div class="card"><strong>High-intent leads</strong><p>Focus on homeowners and businesses with current storm-damage signals, not random cold lists.</p></div>
+      <div class="card"><strong>Insurance-aware angle</strong><p>Position the roofing conversation around urgency, documentation, inspection, and claim-readiness.</p></div>
+      <div class="card"><strong>AI-powered follow-up</strong><p>Lead capture, scoring, SMS, call routing, and CRM handoff can be automated through your Roof Hunter stack.</p></div>
+    </section>
+
+    <section class="split" id="contractors">
+      <div>
+        <h2>For roofing companies ready to scale.</h2>
+        <p class="lead">We help roofing teams target the right markets after hail and wind events, then route interested prospects into a follow-up system that does not sleep, blink, or lose sticky notes.</p>
+      </div>
+      <div class="panel list">
+        <div class="item"><span class="check">✓</span><span>Texas and Oklahoma storm-market targeting</span></div>
+        <div class="item"><span class="check">✓</span><span>Lead scoring by storm signal, location, urgency, and contractor fit</span></div>
+        <div class="item"><span class="check">✓</span><span>Optional AI receptionist, SMS follow-up, and call-agent qualification</span></div>
+        <div class="item"><span class="check">✓</span><span>Built to plug into Google Sheets, Zapier, n8n, CRMs, and call systems</span></div>
+      </div>
+    </section>
+
+    <section class="split" id="homeowners">
+      <div class="panel list">
+        <div class="item"><span class="check">✓</span><span>Recent hail or wind damage?</span></div>
+        <div class="item"><span class="check">✓</span><span>Need a roofer to inspect quickly?</span></div>
+        <div class="item"><span class="check">✓</span><span>Want help understanding what to document before a claim?</span></div>
+      </div>
+      <div>
+        <h2>For homeowners after the storm.</h2>
+        <p class="lead">Roof Hunter Pro routes your request to responsive roofing support so you can move from “I think there is damage” to “someone qualified is looking at it.”</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to hunt smarter?</h2>
+      <p class="lead" style="margin:0 auto 22px;">Roof Hunter Pro is built to become the storm-response growth engine for roofing contractors.</p>
+      <a class="btn" href="#lead-form">Activate the lead machine</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Roof Hunter Pro. Built by Better Business Builder. Storm-response lead systems, AI routing, and contractor growth infrastructure.</div>
+  </footer>
+</body>
+</html>
