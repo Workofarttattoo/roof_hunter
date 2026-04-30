@@ -1,0 +1,25 @@
+# FastAPI dashboard backend (lead teasers, qualify) — use with k8s/api-deployment.yaml
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements-dashboard-api.txt .
+RUN pip install --no-cache-dir -r requirements-dashboard-api.txt
+
+COPY src/dashboard_api.py ./src/
+COPY src/aws_lead_sync.py ./src/
+COPY src/roofhunter_platform.py ./src/
+COPY src/auth_utils.py ./src/
+COPY src/lead_verification_media.py ./src/
+
+ENV ROOF_HUNTER_ROOT=/app/data
+RUN mkdir -p /app/data/leads_manifests /app/data/training_data
+
+# SQLite + CSV manifests; mount a PVC over /app/data for prod persistence
+COPY leads_manifests ./data/leads_manifests
+
+ENV ROOF_HUNTER_DB_PATH=/app/data/leads_manifests/authoritative_storms.db
+ENV ROOF_HUNTER_TRAINING_DIR=/app/data/training_data
+
+EXPOSE 8000
+CMD ["uvicorn", "src.dashboard_api:app", "--host", "0.0.0.0", "--port", "8000"]
