@@ -55,3 +55,71 @@ class RoofVisionFilters:
         except Exception as e:
             logger.error(f"GEOBIA Extraction Error on {image_path}: {e}")
             return None
+
+    @staticmethod
+    def calculate_exg_mask(image_path):
+        """
+        Calculate Excess Green Index (ExG) mask for vegetation detection.
+        ExG = 2*G - R - B (highlights green vegetation vs structures)
+        Useful for detecting canopy loss after storms.
+        """
+        try:
+            img = cv2.imread(image_path)
+            if img is None:
+                return None
+            
+            b, g, r = img[:,:,0].astype(float), img[:,:,1].astype(float), img[:,:,2].astype(float)
+            total = r + g + b + 1e-6  # avoid division by zero
+            
+            # Normalized ExG
+            exg = 2 * (g / total) - (r / total) - (b / total)
+            
+            # Threshold to binary mask (vegetation vs non-vegetation)
+            mask = (exg > 0.1).astype(np.uint8) * 255
+            
+            veg_ratio = np.sum(mask > 0) / (mask.shape[0] * mask.shape[1])
+            return {"mask": mask, "vegetation_ratio": float(veg_ratio)}
+        except Exception as e:
+            logger.debug(f"ExG mask failed: {e}")
+            return None
+
+    @staticmethod
+    def detect_structural_change(before_path, after_path):
+        """
+        Compare before/after images for structural geometry changes.
+        Returns the percentage of changed area (0-100).
+        
+        Uses edge subtraction: if the Canny edge map changes significantly,
+        roof geometry has been altered (collapsed, blown off, etc.)
+        """
+        try:
+            before = cv2.imread(before_path)
+            after = cv2.imread(after_path)
+            
+            if before is None or after is None:
+                return 0.0
+            
+            # Resize to same dimensions
+            h = min(before.shape[0], after.shape[0], 1000)
+            w = min(before.shape[1], after.shape[1], 1000)
+            before = cv2.resize(before, (w, h))
+            after = cv2.resize(after, (w, h))
+            
+            # Convert to grayscale
+            gray_before = cv2.cvtColor(before, cv2.COLOR_BGR2GRAY)
+            gray_after = cv2.cvtColor(after, cv2.COLOR_BGR2GRAY)
+            
+            # Canny edge detection
+            edges_before = cv2.Canny(gray_before, 50, 150)
+            edges_after = cv2.Canny(gray_after, 50, 150)
+            
+            # Calculate difference
+            diff = cv2.absdiff(edges_before, edges_after)
+            changed_pixels = np.sum(diff > 0)
+            total_pixels = diff.shape[0] * diff.shape[1]
+            
+            change_percent = (changed_pixels / total_pixels) * 100
+            return float(change_percent)
+        except Exception as e:
+            logger.debug(f"Structural change detection failed: {e}")
+            return 0.0
