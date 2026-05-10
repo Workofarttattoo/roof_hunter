@@ -4,3 +4,7 @@ requests
 python-dotenv
 boto3
 geopy
+pandas
+numpy
+google-genai
+Pillow
