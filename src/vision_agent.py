@@ -22,6 +22,12 @@ logger = logging.getLogger(__name__)
 class VisionAgent:
     """
     Multi-backend vision AI for roof damage classification.
+    
+    Backend priority:
+      1. CLIP damage head (clip_damage_head.pt) — custom-trained binary classifier
+      2. Google Gemini Vision (multimodal) — when API key available
+      3. YOLOv8 object detection — local fallback
+      4. Spectral physics engine — deterministic fallback (ExG/Canny)
     """
 
     def __init__(self, use_mock=False):
@@ -29,8 +35,39 @@ class VisionAgent:
         self.api_key = os.getenv("GEMINI_API_KEY")
         self.gemini_client = None
         self.yolo_model = None
+        self.clip_model = None
+        self.clip_head = None
 
-        # Try to init Gemini
+        models_dir = os.path.join(os.path.dirname(__file__), '..', 'models')
+
+        # ── Try to init CLIP damage head (custom-trained) ──
+        clip_head_path = os.path.join(models_dir, 'clip_damage_head.pt')
+        if os.path.exists(clip_head_path) and not self.use_mock:
+            try:
+                import torch
+                self.clip_head = torch.load(clip_head_path, map_location='cpu', weights_only=False)
+                # Try loading CLIP for feature extraction
+                try:
+                    import clip as clip_module
+                    self.clip_model, self.clip_preprocess = clip_module.load("ViT-B/32", device="cpu")
+                    logger.info(f"CLIP damage head loaded: {clip_head_path}")
+                except ImportError:
+                    # Try open_clip as fallback
+                    try:
+                        import open_clip
+                        self.clip_model, _, self.clip_preprocess = open_clip.create_model_and_transforms(
+                            'ViT-B-32', pretrained='openai'
+                        )
+                        logger.info(f"CLIP damage head loaded (via open_clip): {clip_head_path}")
+                    except ImportError:
+                        logger.warning("Neither 'clip' nor 'open_clip' installed. "
+                                       "pip install openai-clip OR pip install open-clip-torch")
+                        self.clip_head = None
+            except Exception as e:
+                logger.warning(f"CLIP damage head init failed: {e}")
+                self.clip_head = None
+
+        # ── Try to init Gemini ──
         if self.api_key and not self.use_mock:
             try:
                 from google import genai
@@ -41,16 +78,15 @@ class VisionAgent:
             except Exception as e:
                 logger.warning(f"Gemini init failed: {e}")
 
-        # Try to init YOLO
-        if not self.gemini_client:
+        # ── Try to init YOLO ──
+        if not self.gemini_client and not self.clip_head:
             try:
                 from ultralytics import YOLO
-                # Check for custom trained weights first, fall back to stock
                 weights_paths = [
-                    os.path.join(os.path.dirname(__file__), '..', 'models', 'roof_damage_best.pt'),
-                    os.path.join(os.path.dirname(__file__), '..', 'models', 'best.pt'),
+                    os.path.join(models_dir, 'roof_damage_best.pt'),
+                    os.path.join(models_dir, 'best.pt'),
                     os.path.join(os.path.dirname(__file__), 'yolov8n.pt'),
-                    os.path.join(os.path.dirname(__file__), '..', 'models', 'yolov8n.pt'),
+                    os.path.join(models_dir, 'yolov8n.pt'),
                     'yolov8n.pt'
                 ]
                 for wp in weights_paths:
@@ -67,12 +103,15 @@ class VisionAgent:
                 logger.warning(f"YOLO init failed: {e}")
 
         # Log backend status
+        backends = []
+        if self.clip_head and self.clip_model:
+            backends.append("CLIP damage head (custom-trained)")
         if self.gemini_client:
-            logger.info("Vision backend: Gemini (multimodal AI)")
-        elif self.yolo_model:
-            logger.info("Vision backend: YOLO + physics engine")
-        else:
-            logger.info("Vision backend: Physics engine only (deterministic)")
+            backends.append("Gemini (multimodal AI)")
+        if self.yolo_model:
+            backends.append("YOLO")
+        backends.append("Physics engine")
+        logger.info(f"Vision backends available: {' → '.join(backends)}")
 
     def inspect_roof_historical(self, before_img_path, after_img_path):
         """
@@ -81,24 +120,30 @@ class VisionAgent:
         """
         logger.info(f"Vision analysis: {before_img_path}")
 
-        # 1. Try Gemini multimodal
+        # 1. Try CLIP damage head (custom-trained classifier)
+        if self.clip_head and self.clip_model:
+            result = self._clip_analyze(after_img_path)
+            if result:
+                return result
+
+        # 2. Try Gemini multimodal
         if self.gemini_client:
             result = self._gemini_analyze(before_img_path, after_img_path)
             if result:
                 return result
 
-        # 2. Try YOLO detection
+        # 3. Try YOLO detection
         if self.yolo_model:
             result = self._yolo_analyze(after_img_path)
             if result:
                 return result
 
-        # 3. Physics engine (deterministic)
+        # 4. Physics engine (deterministic)
         result = self._physics_analyze(before_img_path, after_img_path)
         if result:
             return result
 
-        # 4. Final fallback
+        # 5. Final fallback
         return self._heuristic_result()
 
     def inspect_single_image(self, image_path):
@@ -106,6 +151,102 @@ class VisionAgent:
         Single-image damage analysis (when only post-storm imagery is available).
         """
         return self.inspect_roof_historical(image_path, image_path)
+
+    # ─── Backend: CLIP Damage Head (Custom-Trained) ───────────────────────
+
+    def _clip_analyze(self, image_path):
+        """Use custom-trained CLIP damage classification head."""
+        try:
+            import torch
+            import PIL.Image
+
+            if not os.path.exists(image_path) or os.path.getsize(image_path) < 100:
+                return None
+
+            # Load and preprocess image
+            image = PIL.Image.open(image_path).convert("RGB")
+            image_tensor = self.clip_preprocess(image).unsqueeze(0)
+
+            # Extract CLIP features
+            with torch.no_grad():
+                image_features = self.clip_model.encode_image(image_tensor)
+                image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+
+                # Run through custom damage classification head
+                head = self.clip_head
+                if isinstance(head, dict):
+                    # State dict — reconstruct linear head
+                    if 'weight' in head:
+                        linear = torch.nn.Linear(head['weight'].shape[1], head['weight'].shape[0])
+                        linear.load_state_dict(head)
+                        logits = linear(image_features.float())
+                    elif 'model_state_dict' in head:
+                        # Common training checkpoint format
+                        state = head['model_state_dict']
+                        w = state.get('weight', state.get('fc.weight', state.get('classifier.weight')))
+                        b = state.get('bias', state.get('fc.bias', state.get('classifier.bias')))
+                        if w is not None:
+                            linear = torch.nn.Linear(w.shape[1], w.shape[0])
+                            linear.weight = torch.nn.Parameter(w)
+                            if b is not None:
+                                linear.bias = torch.nn.Parameter(b)
+                            logits = linear(image_features.float())
+                        else:
+                            logger.warning(f"CLIP head state_dict keys not recognized: {list(state.keys())[:5]}")
+                            return None
+                    else:
+                        # Try to find any weight tensor
+                        for k, v in head.items():
+                            if isinstance(v, torch.Tensor) and v.dim() == 2:
+                                logits = image_features.float() @ v.T
+                                break
+                        else:
+                            logger.warning(f"CLIP head dict keys not recognized: {list(head.keys())[:5]}")
+                            return None
+                elif isinstance(head, torch.nn.Module):
+                    logits = head(image_features.float())
+                else:
+                    logger.warning(f"CLIP head type not supported: {type(head)}")
+                    return None
+
+                # Convert logits to probabilities
+                probs = torch.softmax(logits, dim=-1)
+                damage_prob = probs[0, -1].item()  # Assume last class = damage
+                
+                # If only 2 classes, index 1 = damage
+                if probs.shape[-1] == 2:
+                    damage_prob = probs[0, 1].item()
+
+            # Classify based on damage probability
+            if damage_prob >= 0.70:
+                damage_level = "Severe"
+                eligible = True
+            elif damage_prob >= 0.45:
+                damage_level = "Minor"
+                eligible = False
+            else:
+                damage_level = "None"
+                eligible = False
+
+            desc = (f"CLIP damage classifier: {damage_prob:.1%} damage probability. "
+                    f"{'Roof replacement recommended.' if eligible else 'Below damage threshold.'}")
+
+            return {
+                "PreStormCondition": "N/A (CLIP single-image classifier)",
+                "PostStormCondition": desc,
+                "DetectedAnomalies": [
+                    {"Type": "Hail/Storm Damage", "Confidence": f"{damage_prob:.1%}", "IsNew": True}
+                ] if damage_prob >= 0.45 else [],
+                "DamageLevel": damage_level,
+                "EstimatedReplacementEligibility": eligible,
+                "DamageDescription": desc,
+                "damage_probability": damage_prob,
+                "backend": "clip_damage_head"
+            }
+
+        except Exception as e:
+            logger.warning(f"CLIP damage analysis failed: {e}")
+            return None
 
     # ─── Backend: Gemini Vision ─────────────────────────────────────────
 
